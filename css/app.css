@@ -471,7 +471,7 @@ header.menu-banner #menu-toggle .feather {
 #menuBox ul li a .name {
   position: absolute;
   text-align: center;
-  width: 65%;
+  width: 90%;
   opacity: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -503,6 +503,7 @@ header.menu-banner #menu-toggle .feather {
 }
 #menuBox ul li a .name .lead {
   display: none;
+  max-width: 80%;
 }
 .desk #menuBox ul li a .name .lead {
   display: block;

@@ -227,7 +227,7 @@ let openM = gsap.timeline({
 })
   .addLabel("terra")
   .to(terrain, { opacity: 0.4, duration: 1.2, ease: "power2.out" })
-  .to(caminoBox, { opacity: 0.3, duration: 0.6, ease: "power2.inOut" }, "terra")
+  .to(caminoBox, { opacity: 1, duration: 0.6, ease: "power2.inOut" }, "terra")
   .to(caminoBox, { scale: "-=0.05", rotation: i => `${dir[i].dirNo}25`, duration: 1.2, ease: "power2.inOut" }, "terra")
   .addLabel("walk")
   .call(caminoRota)
@@ -235,7 +235,7 @@ let openM = gsap.timeline({
   .to(backImgBox, { opacity: 1, duration: 1, ease: "power1.inOut" }, "walk+=0.4")
   .to(caminos, { x: 0, y: 0, left: i => pos[i].left, top: i => pos[i].top, duration: scaleTime, ease: "power2.inOut" }, "walk+=0.8")
   .to(caminoBox, { scale: "random(0.95, 1.25)", duration: scaleTime, transformOrigin: "50% 50%", ease: "power1.inOut"}, "walk+=0.8")
-  .to(names, { opacity: 0.2, duration: scaleTime, ease: "power2.inOut" }, "walk+=1")
+  .to(names, { opacity: 1, duration: scaleTime, ease: "power2.inOut" }, "walk+=1")
   .call(menuParall)
   .to(menuChange, { autoAlpha: 1, duration: 1, ease: "power2.inOut" })
 ;
