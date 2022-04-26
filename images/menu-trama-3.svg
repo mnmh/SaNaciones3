@@ -1,1 +1,780 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M97.08,47.84,100,45l-3-3,1.78-3.85-3.7-1.69,1.7-3.69-3.7-1.69,1.7-3.68L91,25.61l.26-4.24-4.06-.25.25-4.05-4.06-.25.25-4-4.24-.26-1.29-4L74.2,9.74,73,5.88,69.09,7.1,67.86,3.24,63.8,4.53l-2.67-3.3L58,3.77,55.41.61,52.24,3.15,49.7,0,46.39,2.66,42.71.54l-2,3.51L37.16,2l-2,3.51-3.52-2-2.08,3.6-4.31-.65-.62,4.07-4-.61-.62,4-4-.62-.65,4.19-4.15.91.87,4-4,.87.87,4-4,.87.91,4.14L2.38,34.56l2.25,3.38L1.24,40.18l2.25,3.38L.1,45.78l2.35,3.53L0,52.77l3.32,2.34L1,58.42l3.32,2.34L1.94,64.07l3.47,2.44-1,4.11,3.94,1-1,3.93,3.94,1-1,3.93,4.13,1,.52,4.2,4-.5.5,4,4-.5.5,4,4.21-.52,2,3.73L33.8,94l1.93,3.57,3.58-1.92,1.92,3.57,3.74-2L48.2,100l2.64-3.08,3.09,2.64,2.64-3.08,3.09,2.63,2.77-3.23,4,1.4,1.35-3.82,3.83,1.34L73,91l3.84,1.35,1.41-4,4.25-.13-.13-4L86.39,84l-.13-4,4.06-.13-.13-4.23L94.11,74l-1.59-3.73,3.74-1.58-1.59-3.73,3.74-1.58-1.66-3.91,3-2.94L97,53.57l2.92-2.82Zm-.5-.52h0l-2.33-2.39,2.4-2.33L99,45ZM28.19,87.39l-4,.5-.5-4-4,.5-.5-4-4,.49,1-3.86-3.94-1,1-3.93-3.94-1,1-3.93-3.87-1,2.3-3.25L5.33,60.58l2.35-3.31L4.36,54.93l2.35-3.31-3.27-2.3,3.33-2.2L4.52,43.74,7.91,41.5,5.66,38.12l3.39-2.24L6.84,32.56l3.9-.85-.87-4,4-.87-.87-4,4-.87-.86-3.89,4,.61.62-4,4,.62.63-4.07,4,.6L29.85,8l3.52,2,2-3.51,3.52,2L41,5l3.52,2,2-3.45L49,6.71l3.17-2.54L54.7,7.33l3.17-2.54L60.42,8l3.11-2.5,1.21,3.8L68.61,8l1.23,3.86,3.87-1.23,1.23,3.86,3.81-1.21-.24,4,4.06.25-.25,4,4.06.25-.25,4.05,4,.24-1.67,3.62,3.69,1.69-1.7,3.68,3.7,1.69-1.7,3.69,3.63,1.66L93.2,44.91,96,47.82l-2.92,2.82,2.83,2.91L93,56.37l2.79,2.86-3.67,1.55,1.59,3.73L90,66.11l1.59,3.73-3.74,1.58,1.56,3.66-4,.13.13,4.05-4.06.13.13,4-4.06.13.13,4-3.77-1.32L72.56,90,68.7,88.7l-1.35,3.82-3.83-1.34L62.19,95l-3-2.59-2.64,3.08-3.09-2.63-2.64,3.08L47.7,93.25l-2.59,3-1.89-3.51-3.58,1.92-1.92-3.57L34.14,93l-1.93-3.57L28.7,91.34Zm69.66-48.9-1.4,3-3-1.39,1.39-3h0Zm-2-5.38-1.39,3h0l-3-1.39,1.39-3h0Zm-3.39-2.35h0l-3-1.39,1.4-3,3.05,1.39Zm-2-8.71-.2,3.34-3.35-.2.2-3.32h0Zm-3.81-4.29-.2,3.32h0l-3.33-.2.2-3.32h0Zm-4-1h0l-3.33-.2.2-3.34,3.35.2Zm-5-7.37,1,3.18-3.19,1-1-3.17h0ZM72.49,6.78l1,3.17h0l-3.18,1-1-3.16h0ZM67.38,4.15l1,3.17h0l-3.18,1-1-3.18ZM61,2.25l2.1,2.6L60.52,7,58.43,4.36h0Zm-5.72-.62L57.4,4.22h0L54.8,6.33,52.71,3.74h0ZM49.59,1l2.1,2.59h0l-2.6,2.09L47,3.12ZM43,1.53l2.9,1.67L44.21,6.09,41.32,4.43h0ZM37.43,3l2.89,1.66h0L38.65,7.58,35.76,5.92h0ZM31.87,4.51l2.89,1.66h0L33.1,9.07,30.2,7.4Zm-6,2.78,3.32.5-.5,3.31-3.32-.5Zm-4.57,3.46,3.31.51-.51,3.3-3.3-.51h0Zm-4.64,3.39,3.3.51h0L19.42,18l-3.31-.51ZM12.08,19l3.27-.72.72,3.26-3.26.71h0ZM9,23.79l3.26-.71h0L13,26.34l-3.26.71h0Zm.16,4.11h0l.72,3.25-3.27.72-.72-3.26ZM3.39,34.75,6.18,32.9,8,35.68,5.25,37.52h0ZM2.25,40.37,5,38.53h0L6.9,41.3,4.12,43.14h0Zm1.64,3.77h0l1.84,2.77L3,48.76,1.11,46ZM1,52.6l1.93-2.73L5.68,51.8,3.75,54.52h0Zm1,5.65,1.93-2.72h0l2.73,1.92L4.74,60.17h0Zm2.9,2.93h0L7.64,63.1,5.7,65.83,3,63.9Zm.37,8.92.82-3.24,3.25.81L8.51,70.9h0Zm3,4.92L9,71.79H9l3.24.81-.81,3.23h0ZM12,76.71h0l3.24.81-.82,3.24-3.25-.81Zm3.59,8.18-.41-3.32,3.33-.41.41,3.3h0Zm4.54,3.52-.41-3.3h0L23,84.69l.41,3.3h0Zm4.13.21h0l3.31-.41L28,91.52l-3.33.41ZM30.54,95,29,92l2.95-1.58,1.58,2.93h0ZM36,96.62l-1.58-2.93h0l2.94-1.58L39,95h0Zm5.51,1.64L40,95.33h0l2.94-1.58,1.59,2.94Zm6.59.72-2.55-2.17,2.18-2.54,2.54,2.16h0Zm5.73-.45-2.54-2.16h0l2.17-2.53L56,96v0h0Zm5.73-.44-2.54-2.16h0l2.17-2.53,2.55,2.17ZM66,96.36l-3.16-1.11L64,92.1l3.15,1.1h0Zm5.18-2.48L68,92.78h0l1.11-3.14,3.15,1.1h0Zm5.19-2.48-3.15-1.1h0l1.11-3.14,3.16,1.11Zm5.35-3.9-3.35.11-.11-3.34,3.34-.1h0Zm3.94-4.17-3.34.1h0l-.11-3.33,3.34-.1h0Zm.6-4.08h0l-.11-3.33,3.35-.11.11,3.34Zm6.92-5.67-3.09,1.3L88.79,71.8l3.07-1.3h0Zm2.15-5.32-3.07,1.3h0L91,66.49,94,65.19h0Zm-.92-4h0l-1.3-3.06,3.09-1.3L97.51,63Zm4.38-7.78L96.4,58.8l-2.33-2.4,2.4-2.32h0Zm-2.32-3.42h0l-2.33-2.38,2.4-2.32h0l2.33,2.39-2.42,2.31Z" fill="#444d66"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 103 104" style="enable-background:new 0 0 103 104;" xml:space="preserve">
+<style type="text/css">
+	.st0{display:none;}
+	.st1{display:inline;fill:#444D66;}
+	.st2{display:inline;}
+	.st3{fill:none;stroke:#000000;stroke-width:0.2;stroke-miterlimit:10;}
+	.st4{fill:none;stroke:#000000;stroke-width:8.000000e-02;stroke-miterlimit:10;}
+	.st5{fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:10;}
+	.st6{fill:none;stroke:#000000;stroke-width:3.000000e-02;stroke-miterlimit:10;}
+	.st7{fill:none;stroke:#000000;stroke-miterlimit:10;}
+	.st8{stroke:#000000;stroke-width:8.000000e-02;stroke-miterlimit:10;}
+</style>
+<g id="Capa_1" class="st0">
+</g>
+<g id="Capa_3">
+</g>
+<g id="Capa_2">
+	<g>
+		<polygon class="st4" points="56.1,9.2 50.5,9.2 47,6.4 47,4.6 56.1,4.6 		"/>
+		<polygon class="st8" points="45.6,5.7 47,6.6 47,4.4 45.6,4.4 		"/>
+		<circle class="st8" cx="48.2" cy="5.2" r="0.2"/>
+		<circle class="st8" cx="48.6" cy="6.2" r="0.2"/>
+		<circle class="st8" cx="49.8" cy="5.2" r="0.2"/>
+		<circle class="st8" cx="50.2" cy="6.2" r="0.2"/>
+		<circle class="st8" cx="49.8" cy="7.3" r="0.2"/>
+		<circle class="st8" cx="51.4" cy="7.3" r="0.2"/>
+		<circle class="st8" cx="52.9" cy="7.3" r="0.2"/>
+		<circle class="st8" cx="54.4" cy="7.3" r="0.2"/>
+		<circle class="st8" cx="55.3" cy="8.2" r="0.2"/>
+		<circle class="st8" cx="51.5" cy="5.2" r="0.2"/>
+		<circle class="st8" cx="51.9" cy="6.2" r="0.2"/>
+		<circle class="st8" cx="53.1" cy="5.2" r="0.2"/>
+		<circle class="st8" cx="53.5" cy="6.2" r="0.2"/>
+		<circle class="st8" cx="50.7" cy="8.4" r="0.2"/>
+		<circle class="st8" cx="52.4" cy="8.4" r="0.2"/>
+		<circle class="st8" cx="54" cy="8.4" r="0.2"/>
+		<circle class="st8" cx="54.6" cy="5.2" r="0.2"/>
+		<circle class="st8" cx="55" cy="6.2" r="0.2"/>
+		<line class="st8" x1="56.1" y1="4.6" x2="57.6" y2="6.3"/>
+		<line class="st8" x1="55.5" y1="9.2" x2="57" y2="11"/>
+		<line class="st8" x1="56.1" y1="9.1" x2="57.6" y2="10.9"/>
+		<line class="st8" x1="48.2" y1="7.3" x2="46.9" y2="9.4"/>
+		<line class="st8" x1="48.6" y1="7.6" x2="47.4" y2="9.7"/>
+		<ellipse class="st8" cx="45.2" cy="5" rx="0.9" ry="0.8"/>
+		<g>
+			<line x1="45.6" y1="4" x2="45.3" y2="4.4"/>
+			<polygon points="45.6,4 45.4,4.4 45.3,4.4 45.6,4 			"/>
+		</g>
+		<g>
+			<line x1="45.8" y1="4" x2="45.6" y2="4.5"/>
+			<polygon points="45.8,4 45.6,4.5 45.6,4.4 45.8,4 			"/>
+		</g>
+	</g>
+	<g>
+		<polygon class="st4" points="43.2,9.7 37.8,11.4 33.7,9.8 33.2,8.1 41.8,5.4 		"/>
+		<polygon class="st8" points="32.1,9.6 33.7,10 33.1,7.9 31.7,8.3 		"/>
+		<circle class="st8" cx="34.5" cy="8.2" r="0.2"/>
+		<circle class="st8" cx="35.2" cy="9.1" r="0.2"/>
+		<circle class="st8" cx="36" cy="7.8" r="0.2"/>
+		<circle class="st8" cx="36.7" cy="8.6" r="0.2"/>
+		<circle class="st8" cx="36.6" cy="9.8" r="0.2"/>
+		<circle class="st8" cx="38.1" cy="9.4" r="0.2"/>
+		<circle class="st8" cx="39.6" cy="8.9" r="0.2"/>
+		<circle class="st8" cx="41.1" cy="8.5" r="0.2"/>
+		<circle class="st8" cx="42.2" cy="9.1" r="0.2"/>
+		<circle class="st8" cx="37.6" cy="7.3" r="0.2"/>
+		<circle class="st8" cx="38.3" cy="8.1" r="0.2"/>
+		<circle class="st8" cx="39.2" cy="6.8" r="0.2"/>
+		<circle class="st8" cx="39.8" cy="7.7" r="0.2"/>
+		<circle class="st8" cx="37.8" cy="10.6" r="0.2"/>
+		<circle class="st8" cx="39.5" cy="10.1" r="0.2"/>
+		<circle class="st8" cx="41" cy="9.6" r="0.2"/>
+		<circle class="st8" cx="40.6" cy="6.4" r="0.2"/>
+		<circle class="st8" cx="41.3" cy="7.2" r="0.2"/>
+		<line class="st8" x1="41.8" y1="5.4" x2="43.8" y2="6.6"/>
+		<line class="st8" x1="42.6" y1="9.9" x2="44.6" y2="11.2"/>
+		<line class="st8" x1="43.1" y1="9.7" x2="45.1" y2="11"/>
+		<line class="st8" x1="35.1" y1="10.3" x2="34.5" y2="12.7"/>
+		<line class="st8" x1="35.6" y1="10.5" x2="35" y2="12.8"/>
+		<ellipse transform="matrix(0.9556 -0.2948 0.2948 0.9556 -1.2486 9.696)" class="st8" cx="31.5" cy="9" rx="0.9" ry="0.8"/>
+		<g>
+			<line x1="31.6" y1="7.9" x2="31.5" y2="8.4"/>
+			<polygon points="31.6,7.9 31.6,8.4 31.5,8.4 31.6,7.9 			"/>
+		</g>
+		<g>
+			<line x1="31.9" y1="7.9" x2="31.8" y2="8.3"/>
+			<polygon points="31.9,7.9 31.8,8.3 31.8,8.3 31.9,7.9 			"/>
+		</g>
+	</g>
+	<g>
+		<polygon class="st4" points="31,14.1 26.4,17.3 22,16.9 21,15.5 28.5,10.4 		"/>
+		<polygon class="st8" points="20.4,17.2 22.1,17.1 20.9,15.3 19.7,16.1 		"/>
+		<circle class="st8" cx="22.3" cy="15.2" r="0.2"/>
+		<circle class="st8" cx="23.2" cy="15.8" r="0.2"/>
+		<circle class="st8" cx="23.6" cy="14.3" r="0.2"/>
+		<circle class="st8" cx="24.5" cy="15" r="0.2"/>
+		<circle class="st8" cx="24.8" cy="16.1" r="0.2"/>
+		<circle class="st8" cx="26.1" cy="15.2" r="0.2"/>
+		<circle class="st8" cx="27.3" cy="14.4" r="0.2"/>
+		<circle class="st8" cx="28.6" cy="13.5" r="0.2"/>
+		<circle class="st8" cx="29.9" cy="13.8" r="0.2"/>
+		<circle class="st8" cx="25" cy="13.4" r="0.2"/>
+		<circle class="st8" cx="25.9" cy="14" r="0.2"/>
+		<circle class="st8" cx="26.3" cy="12.5" r="0.2"/>
+		<circle class="st8" cx="27.2" cy="13.1" r="0.2"/>
+		<circle class="st8" cx="26.2" cy="16.5" r="0.2"/>
+		<circle class="st8" cx="27.6" cy="15.5" r="0.2"/>
+		<circle class="st8" cx="28.9" cy="14.6" r="0.2"/>
+		<circle class="st8" cx="27.6" cy="11.6" r="0.2"/>
+		<circle class="st8" cx="28.5" cy="12.3" r="0.2"/>
+		<line class="st8" x1="28.5" y1="10.4" x2="30.7" y2="10.9"/>
+		<line class="st8" x1="30.5" y1="14.4" x2="32.8" y2="15.1"/>
+		<line class="st8" x1="31" y1="14.1" x2="33.3" y2="14.7"/>
+		<line class="st8" x1="23.5" y1="17.1" x2="23.6" y2="19.4"/>
+		<line class="st8" x1="24" y1="17" x2="24.2" y2="19.4"/>
+		<ellipse transform="matrix(0.8262 -0.5633 0.5633 0.8262 -6.0508 14.0174)" class="st8" cx="19.7" cy="16.8" rx="0.9" ry="0.8"/>
+		<g>
+			<line x1="19.4" y1="15.8" x2="19.5" y2="16.2"/>
+			<polygon points="19.4,15.8 19.5,16.2 19.5,16.2 19.4,15.8 			"/>
+		</g>
+		<g>
+			<line x1="19.7" y1="15.6" x2="19.8" y2="16.1"/>
+			<polygon points="19.7,15.6 19.8,16.1 19.7,16.1 19.7,15.6 			"/>
+		</g>
+	</g>
+	<g>
+		<polygon class="st4" points="20.7,21.9 17.2,26.2 12.9,27.2 11.5,26.1 17.2,19 		"/>
+		<polygon class="st8" points="11.5,27.9 13.1,27.4 11.4,26 10.5,27.1 		"/>
+		<circle class="st8" cx="12.7" cy="25.5" r="0.2"/>
+		<circle class="st8" cx="13.8" cy="25.8" r="0.2"/>
+		<circle class="st8" cx="13.7" cy="24.3" r="0.2"/>
+		<circle class="st8" cx="14.7" cy="24.6" r="0.2"/>
+		<circle class="st8" cx="15.4" cy="25.6" r="0.2"/>
+		<circle class="st8" cx="16.3" cy="24.4" r="0.2"/>
+		<circle class="st8" cx="17.3" cy="23.2" r="0.2"/>
+		<circle class="st8" cx="18.3" cy="22" r="0.2"/>
+		<circle class="st8" cx="19.5" cy="21.9" r="0.2"/>
+		<circle class="st8" cx="14.8" cy="22.9" r="0.2"/>
+		<circle class="st8" cx="15.8" cy="23.2" r="0.2"/>
+		<circle class="st8" cx="15.7" cy="21.7" r="0.2"/>
+		<circle class="st8" cx="16.8" cy="22" r="0.2"/>
+		<circle class="st8" cx="16.8" cy="25.5" r="0.2"/>
+		<circle class="st8" cx="17.8" cy="24.2" r="0.2"/>
+		<circle class="st8" cx="18.8" cy="23" r="0.2"/>
+		<circle class="st8" cx="16.7" cy="20.5" r="0.2"/>
+		<circle class="st8" cx="17.7" cy="20.8" r="0.2"/>
+		<line class="st8" x1="17.2" y1="19" x2="19.5" y2="18.9"/>
+		<line class="st8" x1="20.3" y1="22.3" x2="22.7" y2="22.3"/>
+		<line class="st8" x1="20.7" y1="21.8" x2="23.1" y2="21.8"/>
+		<line class="st8" x1="14.4" y1="26.9" x2="15.2" y2="29.1"/>
+		<line class="st8" x1="14.9" y1="26.7" x2="15.7" y2="29"/>
+		<ellipse transform="matrix(0.6235 -0.7818 0.7818 0.6235 -17.7013 18.8164)" class="st8" cx="10.7" cy="27.8" rx="0.9" ry="0.8"/>
+		<g>
+			<line x1="10.1" y1="26.9" x2="10.3" y2="27.3"/>
+			<polygon points="10.1,26.9 10.4,27.3 10.3,27.3 10.1,26.9 			"/>
+		</g>
+		<g>
+			<line x1="10.3" y1="26.7" x2="10.5" y2="27.1"/>
+			<polygon points="10.3,26.7 10.6,27.1 10.5,27.1 10.3,26.7 			"/>
+		</g>
+	</g>
+	<g>
+		<polygon class="st4" points="13.2,32.3 11.1,37.5 7.3,39.7 5.6,39.1 8.9,30.7 		"/>
+		<polygon class="st8" points="6.1,40.8 7.5,39.8 5.4,39 4.9,40.3 		"/>
+		<circle class="st8" cx="6.6" cy="38.1" r="0.2"/>
+		<circle class="st8" cx="7.7" cy="38.1" r="0.2"/>
+		<circle class="st8" cx="7.1" cy="36.7" r="0.2"/>
+		<circle class="st8" cx="8.2" cy="36.7" r="0.2"/>
+		<circle class="st8" cx="9.1" cy="37.5" r="0.2"/>
+		<circle class="st8" cx="9.7" cy="36" r="0.2"/>
+		<circle class="st8" cx="10.3" cy="34.6" r="0.2"/>
+		<circle class="st8" cx="10.8" cy="33.1" r="0.2"/>
+		<circle class="st8" cx="12" cy="32.7" r="0.2"/>
+		<circle class="st8" cx="7.8" cy="35.1" r="0.2"/>
+		<circle class="st8" cx="8.9" cy="35.1" r="0.2"/>
+		<circle class="st8" cx="8.3" cy="33.6" r="0.2"/>
+		<circle class="st8" cx="9.4" cy="33.6" r="0.2"/>
+		<circle class="st8" cx="10.5" cy="37" r="0.2"/>
+		<circle class="st8" cx="11.1" cy="35.4" r="0.2"/>
+		<circle class="st8" cx="11.7" cy="33.9" r="0.2"/>
+		<circle class="st8" cx="8.9" cy="32.2" r="0.2"/>
+		<circle class="st8" cx="10" cy="32.2" r="0.2"/>
+		<line class="st8" x1="8.9" y1="30.7" x2="11.1" y2="29.9"/>
+		<line class="st8" x1="12.9" y1="32.9" x2="15.2" y2="32.1"/>
+		<line class="st8" x1="13.1" y1="32.3" x2="15.4" y2="31.5"/>
+		<line class="st8" x1="8.6" y1="39" x2="10.1" y2="40.9"/>
+		<line class="st8" x1="9" y1="38.7" x2="10.5" y2="40.6"/>
+		<ellipse transform="matrix(0.3653 -0.9309 0.9309 0.3653 -34.727 30.9155)" class="st8" cx="5.3" cy="40.9" rx="0.9" ry="0.8"/>
+		<g>
+			<line x1="4.5" y1="40.2" x2="4.8" y2="40.6"/>
+			<polygon points="4.5,40.2 4.9,40.5 4.8,40.6 4.5,40.2 			"/>
+		</g>
+		<g>
+			<line x1="4.6" y1="39.9" x2="5" y2="40.3"/>
+			<polygon points="4.6,39.9 5,40.3 4.9,40.3 4.6,39.9 			"/>
+		</g>
+	</g>
+	<g>
+		<polygon class="st4" points="9,44.5 8.6,50.1 5.6,53.4 3.8,53.2 4.5,44.2 		"/>
+		<polygon class="st8" points="4.8,54.7 5.8,53.4 3.6,53.2 3.5,54.6 		"/>
+		<circle class="st8" cx="4.4" cy="52" r="0.2"/>
+		<circle class="st8" cx="5.5" cy="51.7" r="0.2"/>
+		<circle class="st8" cx="4.5" cy="50.5" r="0.2"/>
+		<circle class="st8" cx="5.6" cy="50.1" r="0.2"/>
+		<circle class="st8" cx="6.7" cy="50.6" r="0.2"/>
+		<circle class="st8" cx="6.8" cy="49.1" r="0.2"/>
+		<circle class="st8" cx="6.9" cy="47.6" r="0.2"/>
+		<circle class="st8" cx="7" cy="46" r="0.2"/>
+		<circle class="st8" cx="8" cy="45.2" r="0.2"/>
+		<circle class="st8" cx="4.7" cy="48.8" r="0.2"/>
+		<circle class="st8" cx="5.7" cy="48.4" r="0.2"/>
+		<circle class="st8" cx="4.8" cy="47.2" r="0.2"/>
+		<circle class="st8" cx="5.8" cy="46.9" r="0.2"/>
+		<circle class="st8" cx="7.8" cy="49.8" r="0.2"/>
+		<circle class="st8" cx="7.9" cy="48.1" r="0.2"/>
+		<circle class="st8" cx="8.1" cy="46.5" r="0.2"/>
+		<circle class="st8" cx="4.9" cy="45.7" r="0.2"/>
+		<circle class="st8" cx="6" cy="45.4" r="0.2"/>
+		<line class="st8" x1="4.5" y1="44.2" x2="6.3" y2="42.8"/>
+		<line class="st8" x1="9" y1="45.1" x2="10.9" y2="43.7"/>
+		<line class="st8" x1="8.9" y1="44.5" x2="10.9" y2="43.1"/>
+		<line class="st8" x1="6.6" y1="52.2" x2="8.6" y2="53.6"/>
+		<line class="st8" x1="6.9" y1="51.8" x2="8.9" y2="53.2"/>
+		
+			<ellipse transform="matrix(7.473009e-02 -0.9972 0.9972 7.473009e-02 -51.1696 54.9822)" class="st8" cx="4" cy="55.1" rx="0.9" ry="0.8"/>
+		<g>
+			<line x1="3.1" y1="54.6" x2="3.5" y2="54.9"/>
+			<polygon points="3.1,54.6 3.5,54.8 3.5,54.9 3.1,54.6 			"/>
+		</g>
+		<g>
+			<line x1="3.1" y1="54.3" x2="3.5" y2="54.6"/>
+			<polygon points="3.1,54.3 3.5,54.5 3.5,54.6 3.1,54.3 			"/>
+		</g>
+	</g>
+	<g>
+		<polygon class="st4" points="8.6,57.4 9.9,62.9 7.9,66.9 6.2,67.3 4.2,58.4 		"/>
+		<polygon class="st8" points="7.6,68.4 8.2,66.8 6,67.3 6.3,68.7 		"/>
+		<circle class="st8" cx="6.5" cy="65.9" r="0.2"/>
+		<circle class="st8" cx="7.4" cy="65.3" r="0.2"/>
+		<circle class="st8" cx="6.1" cy="64.4" r="0.2"/>
+		<circle class="st8" cx="7" cy="63.8" r="0.2"/>
+		<circle class="st8" cx="8.2" cy="63.9" r="0.2"/>
+		<circle class="st8" cx="7.9" cy="62.4" r="0.2"/>
+		<circle class="st8" cx="7.5" cy="60.9" r="0.2"/>
+		<circle class="st8" cx="7.2" cy="59.4" r="0.2"/>
+		<circle class="st8" cx="7.9" cy="58.4" r="0.2"/>
+		<circle class="st8" cx="5.7" cy="62.7" r="0.2"/>
+		<circle class="st8" cx="6.6" cy="62.1" r="0.2"/>
+		<circle class="st8" cx="5.4" cy="61.2" r="0.2"/>
+		<circle class="st8" cx="6.3" cy="60.6" r="0.2"/>
+		<circle class="st8" cx="9" cy="62.8" r="0.2"/>
+		<circle class="st8" cx="8.7" cy="61.1" r="0.2"/>
+		<circle class="st8" cx="8.3" cy="59.6" r="0.2"/>
+		<circle class="st8" cx="5.1" cy="59.7" r="0.2"/>
+		<circle class="st8" cx="6" cy="59.1" r="0.2"/>
+		<line class="st8" x1="4.2" y1="58.4" x2="5.5" y2="56.6"/>
+		<line class="st8" x1="8.8" y1="58" x2="10.2" y2="56.1"/>
+		<line class="st8" x1="8.6" y1="57.4" x2="10" y2="55.5"/>
+		<line class="st8" x1="8.6" y1="65.5" x2="10.9" y2="66.2"/>
+		<line class="st8" x1="8.8" y1="65" x2="11.1" y2="65.8"/>
+		<ellipse transform="matrix(0.9749 -0.2225 0.2225 0.9749 -15.1671 3.2869)" class="st8" cx="7" cy="68.9" rx="0.8" ry="0.9"/>
+		<g>
+			<line x1="5.9" y1="68.8" x2="6.4" y2="68.9"/>
+			<polygon points="5.9,68.8 6.4,68.9 6.4,69 5.9,68.8 			"/>
+		</g>
+		<g>
+			<line x1="5.9" y1="68.5" x2="6.4" y2="68.6"/>
+			<polygon points="5.9,68.5 6.4,68.6 6.4,68.7 5.9,68.5 			"/>
+		</g>
+	</g>
+	<g>
+		<polygon class="st4" points="12.1,69.8 14.9,74.7 14.2,79.1 12.7,80 8.1,72.1 		"/>
+		<polygon class="st8" points="14.4,80.6 14.4,79 12.5,80.1 13.2,81.3 		"/>
+		<circle class="st8" cx="12.5" cy="78.6" r="0.2"/>
+		<circle class="st8" cx="13.2" cy="77.8" r="0.2"/>
+		<circle class="st8" cx="11.7" cy="77.3" r="0.2"/>
+		<circle class="st8" cx="12.4" cy="76.4" r="0.2"/>
+		<circle class="st8" cx="13.6" cy="76.2" r="0.2"/>
+		<circle class="st8" cx="12.8" cy="74.8" r="0.2"/>
+		<circle class="st8" cx="12.1" cy="73.5" r="0.2"/>
+		<circle class="st8" cx="11.3" cy="72.2" r="0.2"/>
+		<circle class="st8" cx="11.6" cy="71" r="0.2"/>
+		<circle class="st8" cx="10.9" cy="75.8" r="0.2"/>
+		<circle class="st8" cx="11.6" cy="74.9" r="0.2"/>
+		<circle class="st8" cx="10.1" cy="74.4" r="0.2"/>
+		<circle class="st8" cx="10.8" cy="73.5" r="0.2"/>
+		<circle class="st8" cx="14.1" cy="74.9" r="0.2"/>
+		<circle class="st8" cx="13.2" cy="73.4" r="0.2"/>
+		<circle class="st8" cx="12.4" cy="72" r="0.2"/>
+		<circle class="st8" cx="9.3" cy="73.1" r="0.2"/>
+		<circle class="st8" cx="10" cy="72.2" r="0.2"/>
+		<line class="st8" x1="8.1" y1="72.1" x2="8.9" y2="69.9"/>
+		<line class="st8" x1="12.4" y1="70.4" x2="13.2" y2="68.1"/>
+		<line class="st8" x1="12" y1="69.9" x2="12.9" y2="67.6"/>
+		<line class="st8" x1="14.4" y1="77.6" x2="16.8" y2="77.6"/>
+		<line class="st8" x1="14.5" y1="77.1" x2="16.9" y2="77.1"/>
+		<ellipse transform="matrix(0.866 -0.5 0.5 0.866 -38.8073 17.8591)" class="st8" cx="13.9" cy="81.3" rx="0.8" ry="0.9"/>
+		<g>
+			<line x1="12.9" y1="81.5" x2="13.3" y2="81.5"/>
+			<polygon points="12.9,81.5 13.3,81.5 13.3,81.5 12.9,81.5 			"/>
+		</g>
+		<g>
+			<line x1="12.7" y1="81.3" x2="13.2" y2="81.2"/>
+			<polygon points="12.7,81.3 13.2,81.2 13.2,81.3 12.7,81.3 			"/>
+		</g>
+	</g>
+	<g>
+		<polygon class="st4" points="19,80.7 23.1,84.5 23.8,88.9 22.6,90.2 15.9,84 		"/>
+		<polygon class="st8" points="24.4,90.3 24,88.7 22.5,90.4 23.5,91.3 		"/>
+		<circle class="st8" cx="22.1" cy="89" r="0.2"/>
+		<circle class="st8" cx="22.5" cy="87.9" r="0.2"/>
+		<circle class="st8" cx="20.9" cy="87.9" r="0.2"/>
+		<circle class="st8" cx="21.3" cy="86.9" r="0.2"/>
+		<circle class="st8" cx="22.4" cy="86.3" r="0.2"/>
+		<circle class="st8" cx="21.2" cy="85.3" r="0.2"/>
+		<circle class="st8" cx="20.1" cy="84.2" r="0.2"/>
+		<circle class="st8" cx="19" cy="83.2" r="0.2"/>
+		<circle class="st8" cx="18.9" cy="81.9" r="0.2"/>
+		<circle class="st8" cx="19.6" cy="86.7" r="0.2"/>
+		<circle class="st8" cx="20" cy="85.7" r="0.2"/>
+		<circle class="st8" cx="18.5" cy="85.7" r="0.2"/>
+		<circle class="st8" cx="18.9" cy="84.6" r="0.2"/>
+		<circle class="st8" cx="22.4" cy="84.9" r="0.2"/>
+		<circle class="st8" cx="21.2" cy="83.7" r="0.2"/>
+		<circle class="st8" cx="20" cy="82.7" r="0.2"/>
+		<circle class="st8" cx="17.4" cy="84.6" r="0.2"/>
+		<circle class="st8" cx="17.8" cy="83.6" r="0.2"/>
+		<line class="st8" x1="15.9" y1="84" x2="16" y2="81.7"/>
+		<line class="st8" x1="19.5" y1="81.1" x2="19.6" y2="78.7"/>
+		<line class="st8" x1="19" y1="80.8" x2="19.1" y2="78.4"/>
+		<line class="st8" x1="23.6" y1="87.4" x2="25.9" y2="86.7"/>
+		<line class="st8" x1="23.4" y1="86.9" x2="25.7" y2="86.2"/>
+		<ellipse transform="matrix(0.6802 -0.7331 0.7331 0.6802 -59.0818 46.8833)" class="st8" cx="24.2" cy="91.2" rx="0.8" ry="0.9"/>
+		<g>
+			<line x1="23.2" y1="91.6" x2="23.7" y2="91.5"/>
+			<polygon points="23.2,91.6 23.7,91.4 23.7,91.5 23.2,91.6 			"/>
+		</g>
+		<g>
+			<line x1="23" y1="91.4" x2="23.5" y2="91.2"/>
+			<polygon points="23,91.4 23.5,91.2 23.5,91.3 23,91.4 			"/>
+		</g>
+	</g>
+	<g>
+		<polygon class="st4" points="28.9,89 33.9,91.5 35.9,95.5 35.1,97 26.9,93.1 		"/>
+		<polygon class="st8" points="36.9,96.7 36,95.3 35,97.2 36.3,97.9 		"/>
+		<circle class="st8" cx="34.2" cy="96" r="0.2"/>
+		<circle class="st8" cx="34.3" cy="94.9" r="0.2"/>
+		<circle class="st8" cx="32.8" cy="95.3" r="0.2"/>
+		<circle class="st8" cx="32.9" cy="94.3" r="0.2"/>
+		<circle class="st8" cx="33.7" cy="93.4" r="0.2"/>
+		<circle class="st8" cx="32.3" cy="92.7" r="0.2"/>
+		<circle class="st8" cx="31" cy="92.1" r="0.2"/>
+		<circle class="st8" cx="29.5" cy="91.4" r="0.2"/>
+		<circle class="st8" cx="29.1" cy="90.2" r="0.2"/>
+		<circle class="st8" cx="31.2" cy="94.6" r="0.2"/>
+		<circle class="st8" cx="31.3" cy="93.5" r="0.2"/>
+		<circle class="st8" cx="29.8" cy="93.9" r="0.2"/>
+		<circle class="st8" cx="29.9" cy="92.8" r="0.2"/>
+		<circle class="st8" cx="33.4" cy="92.1" r="0.2"/>
+		<circle class="st8" cx="31.8" cy="91.3" r="0.2"/>
+		<circle class="st8" cx="30.4" cy="90.6" r="0.2"/>
+		<circle class="st8" cx="28.5" cy="93.3" r="0.2"/>
+		<circle class="st8" cx="28.5" cy="92.2" r="0.2"/>
+		<line class="st8" x1="26.9" y1="93.1" x2="26.3" y2="90.9"/>
+		<line class="st8" x1="29.4" y1="89.3" x2="28.9" y2="87"/>
+		<line class="st8" x1="28.8" y1="89.1" x2="28.3" y2="86.8"/>
+		<line class="st8" x1="35.2" y1="94.1" x2="37.2" y2="92.8"/>
+		<line class="st8" x1="34.9" y1="93.7" x2="36.9" y2="92.3"/>
+		<ellipse transform="matrix(0.4339 -0.901 0.901 0.4339 -66.9559 88.4276)" class="st8" cx="36.9" cy="97.5" rx="0.8" ry="0.9"/>
+		<g>
+			<line x1="36.1" y1="98.2" x2="36.5" y2="97.9"/>
+			<polygon points="36.1,98.2 36.5,97.9 36.5,98 36.1,98.2 			"/>
+		</g>
+		<g>
+			<line x1="35.9" y1="98.1" x2="36.2" y2="97.8"/>
+			<polygon points="35.9,98.1 36.2,97.8 36.3,97.8 35.9,98.1 			"/>
+		</g>
+	</g>
+	<g>
+		<polygon class="st4" points="40.7,94.1 46.3,94.9 49.3,98.2 49,99.9 40.1,98.6 		"/>
+		<polygon class="st8" points="50.6,99 49.3,97.9 49,100.1 50.4,100.3 		"/>
+		<circle class="st8" cx="47.9" cy="99.2" r="0.2"/>
+		<circle class="st8" cx="47.7" cy="98.1" r="0.2"/>
+		<circle class="st8" cx="46.3" cy="99" r="0.2"/>
+		<circle class="st8" cx="46.1" cy="97.9" r="0.2"/>
+		<circle class="st8" cx="46.7" cy="96.9" r="0.2"/>
+		<circle class="st8" cx="45.1" cy="96.6" r="0.2"/>
+		<circle class="st8" cx="43.6" cy="96.4" r="0.2"/>
+		<circle class="st8" cx="42.1" cy="96.2" r="0.2"/>
+		<circle class="st8" cx="41.4" cy="95.1" r="0.2"/>
+		<circle class="st8" cx="44.6" cy="98.7" r="0.2"/>
+		<circle class="st8" cx="44.4" cy="97.6" r="0.2"/>
+		<circle class="st8" cx="43.1" cy="98.5" r="0.2"/>
+		<circle class="st8" cx="42.8" cy="97.4" r="0.2"/>
+		<circle class="st8" cx="45.9" cy="95.7" r="0.2"/>
+		<circle class="st8" cx="44.2" cy="95.4" r="0.2"/>
+		<circle class="st8" cx="42.7" cy="95.2" r="0.2"/>
+		<circle class="st8" cx="41.6" cy="98.3" r="0.2"/>
+		<circle class="st8" cx="41.4" cy="97.2" r="0.2"/>
+		<line class="st8" x1="40.1" y1="98.6" x2="38.8" y2="96.6"/>
+		<line class="st8" x1="41.3" y1="94.2" x2="40.1" y2="92.1"/>
+		<line class="st8" x1="40.7" y1="94.2" x2="39.5" y2="92.1"/>
+		<line class="st8" x1="48.3" y1="97.1" x2="49.8" y2="95.2"/>
+		<line class="st8" x1="47.9" y1="96.7" x2="49.4" y2="94.9"/>
+		<ellipse transform="matrix(0.149 -0.9888 0.9888 0.149 -55.389 135.2609)" class="st8" cx="50.9" cy="99.8" rx="0.8" ry="0.9"/>
+		<g>
+			<line x1="50.4" y1="100.8" x2="50.6" y2="100.4"/>
+			<polygon points="50.4,100.8 50.6,100.3 50.7,100.4 50.4,100.8 			"/>
+		</g>
+		<g>
+			<line x1="50.1" y1="100.7" x2="50.4" y2="100.3"/>
+			<polygon points="50.1,100.7 50.3,100.3 50.4,100.3 50.1,100.7 			"/>
+		</g>
+	</g>
+	<g>
+		<polygon class="st4" points="53.6,95.4 59.1,94.6 63,96.8 63.2,98.5 54.3,99.9 		"/>
+		<polygon class="st8" points="64.5,97.2 62.9,96.6 63.3,98.8 64.7,98.5 		"/>
+		<circle class="st8" cx="61.9" cy="98.2" r="0.2"/>
+		<circle class="st8" cx="61.4" cy="97.3" r="0.2"/>
+		<circle class="st8" cx="60.4" cy="98.4" r="0.2"/>
+		<circle class="st8" cx="59.8" cy="97.5" r="0.2"/>
+		<circle class="st8" cx="60" cy="96.3" r="0.2"/>
+		<circle class="st8" cx="58.5" cy="96.6" r="0.2"/>
+		<circle class="st8" cx="57" cy="96.8" r="0.2"/>
+		<circle class="st8" cx="55.5" cy="97" r="0.2"/>
+		<circle class="st8" cx="54.5" cy="96.2" r="0.2"/>
+		<circle class="st8" cx="58.7" cy="98.7" r="0.2"/>
+		<circle class="st8" cx="58.1" cy="97.7" r="0.2"/>
+		<circle class="st8" cx="57.1" cy="98.9" r="0.2"/>
+		<circle class="st8" cx="56.6" cy="98" r="0.2"/>
+		<circle class="st8" cx="59" cy="95.4" r="0.2"/>
+		<circle class="st8" cx="57.3" cy="95.7" r="0.2"/>
+		<circle class="st8" cx="55.7" cy="95.9" r="0.2"/>
+		<circle class="st8" cx="55.6" cy="99.1" r="0.2"/>
+		<circle class="st8" cx="55.1" cy="98.2" r="0.2"/>
+		<line class="st8" x1="54.3" y1="99.9" x2="52.5" y2="98.4"/>
+		<line class="st8" x1="54.2" y1="95.3" x2="52.4" y2="93.7"/>
+		<line class="st8" x1="53.6" y1="95.5" x2="51.8" y2="93.9"/>
+		<line class="st8" x1="61.6" y1="96" x2="62.5" y2="93.8"/>
+		<line class="st8" x1="61.2" y1="95.8" x2="62.1" y2="93.6"/>
+		<ellipse transform="matrix(0.9888 -0.149 0.149 0.9888 -13.8656 10.7753)" class="st8" cx="65" cy="97.9" rx="0.9" ry="0.8"/>
+		<g>
+			<line x1="64.7" y1="99" x2="64.9" y2="98.5"/>
+			<polygon points="64.7,99 64.8,98.5 64.9,98.5 64.7,99 			"/>
+		</g>
+		<g>
+			<line x1="64.4" y1="99" x2="64.6" y2="98.5"/>
+			<polygon points="64.4,99 64.6,98.5 64.6,98.5 64.4,99 			"/>
+		</g>
+	</g>
+	<g>
+		<polygon class="st4" points="66.2,92.9 71.3,90.5 75.6,91.5 76.4,93.1 68.2,97 		"/>
+		<polygon class="st8" points="77.2,91.4 75.5,91.3 76.5,93.2 77.7,92.6 		"/>
+		<circle class="st8" cx="75" cy="93.1" r="0.2"/>
+		<circle class="st8" cx="74.2" cy="92.4" r="0.2"/>
+		<circle class="st8" cx="73.6" cy="93.8" r="0.2"/>
+		<circle class="st8" cx="72.8" cy="93" r="0.2"/>
+		<circle class="st8" cx="72.7" cy="91.9" r="0.2"/>
+		<circle class="st8" cx="71.3" cy="92.5" r="0.2"/>
+		<circle class="st8" cx="69.9" cy="93.2" r="0.2"/>
+		<circle class="st8" cx="68.5" cy="93.9" r="0.2"/>
+		<circle class="st8" cx="67.3" cy="93.4" r="0.2"/>
+		<circle class="st8" cx="72.1" cy="94.5" r="0.2"/>
+		<circle class="st8" cx="71.2" cy="93.8" r="0.2"/>
+		<circle class="st8" cx="70.6" cy="95.2" r="0.2"/>
+		<circle class="st8" cx="69.8" cy="94.5" r="0.2"/>
+		<circle class="st8" cx="71.4" cy="91.3" r="0.2"/>
+		<circle class="st8" cx="69.8" cy="92" r="0.2"/>
+		<circle class="st8" cx="68.4" cy="92.7" r="0.2"/>
+		<circle class="st8" cx="69.3" cy="95.9" r="0.2"/>
+		<circle class="st8" cx="68.5" cy="95.1" r="0.2"/>
+		<line class="st8" x1="68.2" y1="97" x2="66.1" y2="96.1"/>
+		<line class="st8" x1="66.8" y1="92.7" x2="64.6" y2="91.6"/>
+		<line class="st8" x1="66.3" y1="93" x2="64.1" y2="92"/>
+		<line class="st8" x1="74.1" y1="91.1" x2="74.3" y2="88.7"/>
+		<line class="st8" x1="73.6" y1="91.1" x2="73.8" y2="88.7"/>
+		<ellipse transform="matrix(0.901 -0.4339 0.4339 0.901 -32.1764 42.8762)" class="st8" cx="77.8" cy="91.9" rx="0.9" ry="0.8"/>
+		<g>
+			<line x1="77.9" y1="93" x2="77.9" y2="92.5"/>
+			<polygon points="77.9,93 77.9,92.5 78,92.5 77.9,93 			"/>
+		</g>
+		<g>
+			<line x1="77.7" y1="93.1" x2="77.7" y2="92.6"/>
+			<polygon points="77.7,93.1 77.6,92.6 77.7,92.6 77.7,93.1 			"/>
+		</g>
+	</g>
+	<g>
+		<polygon class="st4" points="77.6,86.8 81.7,83 86.1,82.6 87.3,83.9 80.7,90.1 		"/>
+		<polygon class="st8" points="87.6,82.1 86,82.5 87.5,84.1 88.5,83.1 		"/>
+		<circle class="st8" cx="86" cy="84.4" r="0.2"/>
+		<circle class="st8" cx="85" cy="83.9" r="0.2"/>
+		<circle class="st8" cx="84.9" cy="85.5" r="0.2"/>
+		<circle class="st8" cx="83.9" cy="85" r="0.2"/>
+		<circle class="st8" cx="83.4" cy="83.9" r="0.2"/>
+		<circle class="st8" cx="82.3" cy="85" r="0.2"/>
+		<circle class="st8" cx="81.2" cy="86" r="0.2"/>
+		<circle class="st8" cx="80" cy="87" r="0.2"/>
+		<circle class="st8" cx="78.8" cy="87" r="0.2"/>
+		<circle class="st8" cx="83.6" cy="86.6" r="0.2"/>
+		<circle class="st8" cx="82.6" cy="86.1" r="0.2"/>
+		<circle class="st8" cx="82.5" cy="87.7" r="0.2"/>
+		<circle class="st8" cx="81.5" cy="87.2" r="0.2"/>
+		<circle class="st8" cx="82" cy="83.7" r="0.2"/>
+		<circle class="st8" cx="80.8" cy="84.9" r="0.2"/>
+		<circle class="st8" cx="79.6" cy="86" r="0.2"/>
+		<circle class="st8" cx="81.4" cy="88.7" r="0.2"/>
+		<circle class="st8" cx="80.4" cy="88.2" r="0.2"/>
+		<line class="st8" x1="80.7" y1="90.1" x2="78.4" y2="89.9"/>
+		<line class="st8" x1="78" y1="86.4" x2="75.6" y2="86.1"/>
+		<line class="st8" x1="77.6" y1="86.8" x2="75.3" y2="86.5"/>
+		<line class="st8" x1="84.6" y1="82.8" x2="84.1" y2="80.4"/>
+		<line class="st8" x1="84.1" y1="82.9" x2="83.6" y2="80.5"/>
+		<ellipse transform="matrix(0.7331 -0.6802 0.6802 0.7331 -32.4666 82.1178)" class="st8" cx="88.4" cy="82.4" rx="0.9" ry="0.8"/>
+		<g>
+			<line x1="88.8" y1="83.4" x2="88.7" y2="83"/>
+			<polygon points="88.8,83.4 88.6,83 88.7,82.9 88.8,83.4 			"/>
+		</g>
+		<g>
+			<line x1="88.6" y1="83.6" x2="88.4" y2="83.1"/>
+			<polygon points="88.6,83.6 88.4,83.1 88.5,83.1 88.6,83.6 			"/>
+		</g>
+	</g>
+	<g>
+		<polygon class="st4" points="86.6,77.6 89.4,72.7 93.6,71.1 95.1,72 90.5,79.8 		"/>
+		<polygon class="st8" points="94.8,70.2 93.4,71 95.3,72.1 96,70.9 		"/>
+		<circle class="st8" cx="94" cy="72.8" r="0.2"/>
+		<circle class="st8" cx="92.9" cy="72.6" r="0.2"/>
+		<circle class="st8" cx="93.2" cy="74.2" r="0.2"/>
+		<circle class="st8" cx="92.1" cy="74" r="0.2"/>
+		<circle class="st8" cx="91.4" cy="73.1" r="0.2"/>
+		<circle class="st8" cx="90.6" cy="74.4" r="0.2"/>
+		<circle class="st8" cx="89.8" cy="75.7" r="0.2"/>
+		<circle class="st8" cx="89" cy="77.1" r="0.2"/>
+		<circle class="st8" cx="87.8" cy="77.4" r="0.2"/>
+		<circle class="st8" cx="92.4" cy="75.6" r="0.2"/>
+		<circle class="st8" cx="91.3" cy="75.5" r="0.2"/>
+		<circle class="st8" cx="91.6" cy="77" r="0.2"/>
+		<circle class="st8" cx="90.5" cy="76.8" r="0.2"/>
+		<circle class="st8" cx="90" cy="73.4" r="0.2"/>
+		<circle class="st8" cx="89.1" cy="74.8" r="0.2"/>
+		<circle class="st8" cx="88.3" cy="76.2" r="0.2"/>
+		<circle class="st8" cx="90.8" cy="78.3" r="0.2"/>
+		<circle class="st8" cx="89.7" cy="78.1" r="0.2"/>
+		<line class="st8" x1="90.5" y1="79.8" x2="88.3" y2="80.3"/>
+		<line class="st8" x1="86.9" y1="77.1" x2="84.6" y2="77.5"/>
+		<line class="st8" x1="86.7" y1="77.6" x2="84.3" y2="78"/>
+		<line class="st8" x1="92.1" y1="71.7" x2="91" y2="69.6"/>
+		<line class="st8" x1="91.7" y1="71.9" x2="90.5" y2="69.8"/>
+		<ellipse transform="matrix(0.5 -0.866 0.866 0.5 -12.9921 117.9574)" class="st8" cx="95.7" cy="70.2" rx="0.9" ry="0.8"/>
+		<g>
+			<line x1="96.3" y1="71.1" x2="96.1" y2="70.7"/>
+			<polygon points="96.3,71.1 96,70.7 96.1,70.6 96.3,71.1 			"/>
+		</g>
+		<g>
+			<line x1="96.2" y1="71.3" x2="95.9" y2="70.9"/>
+			<polygon points="96.2,71.3 95.9,70.9 95.9,70.9 96.2,71.3 			"/>
+		</g>
+	</g>
+	<g>
+		<polygon class="st4" points="92.5,66.1 93.8,60.7 97.3,57.9 99,58.3 97,67.1 		"/>
+		<polygon class="st8" points="98.2,56.6 97,57.8 99.2,58.3 99.5,56.9 		"/>
+		<circle class="st8" cx="98.2" cy="59.4" r="0.2"/>
+		<circle class="st8" cx="97.1" cy="59.5" r="0.2"/>
+		<circle class="st8" cx="97.8" cy="60.9" r="0.2"/>
+		<circle class="st8" cx="96.8" cy="61.1" r="0.2"/>
+		<circle class="st8" cx="95.7" cy="60.4" r="0.2"/>
+		<circle class="st8" cx="95.4" cy="62" r="0.2"/>
+		<circle class="st8" cx="95.1" cy="63.4" r="0.2"/>
+		<circle class="st8" cx="94.7" cy="65" r="0.2"/>
+		<circle class="st8" cx="93.6" cy="65.6" r="0.2"/>
+		<circle class="st8" cx="97.5" cy="62.6" r="0.2"/>
+		<circle class="st8" cx="96.4" cy="62.8" r="0.2"/>
+		<circle class="st8" cx="97.1" cy="64.1" r="0.2"/>
+		<circle class="st8" cx="96" cy="64.3" r="0.2"/>
+		<circle class="st8" cx="94.5" cy="61.1" r="0.2"/>
+		<circle class="st8" cx="94.1" cy="62.8" r="0.2"/>
+		<circle class="st8" cx="93.8" cy="64.3" r="0.2"/>
+		<circle class="st8" cx="96.8" cy="65.6" r="0.2"/>
+		<circle class="st8" cx="95.7" cy="65.8" r="0.2"/>
+		<line class="st8" x1="97" y1="67.1" x2="95" y2="68.2"/>
+		<line class="st8" x1="92.7" y1="65.5" x2="90.5" y2="66.6"/>
+		<line class="st8" x1="92.6" y1="66.1" x2="90.5" y2="67.2"/>
+		<line class="st8" x1="96.1" y1="58.8" x2="94.3" y2="57.2"/>
+		<line class="st8" x1="95.7" y1="59.2" x2="94" y2="57.6"/>
+		<ellipse transform="matrix(0.2225 -0.9749 0.9749 0.2225 21.9612 140.4126)" class="st8" cx="99" cy="56.4" rx="0.9" ry="0.8"/>
+		<g>
+			<line x1="99.9" y1="57" x2="99.5" y2="56.7"/>
+			<polygon points="99.9,57 99.5,56.8 99.6,56.7 99.9,57 			"/>
+		</g>
+		<g>
+			<line x1="99.8" y1="57.3" x2="99.5" y2="57"/>
+			<polygon points="99.8,57.3 99.4,57 99.5,57 99.8,57.3 			"/>
+		</g>
+	</g>
+	<g>
+		<polygon class="st4" points="94.8,53.4 94.4,47.9 96.9,44.2 98.7,44 99.4,53.1 		"/>
+		<polygon class="st8" points="97.5,42.7 96.7,44.2 98.9,44 98.8,42.6 		"/>
+		<circle class="st8" cx="98.2" cy="45.3" r="0.2"/>
+		<circle class="st8" cx="97.2" cy="45.8" r="0.2"/>
+		<circle class="st8" cx="98.4" cy="46.9" r="0.2"/>
+		<circle class="st8" cx="97.4" cy="47.4" r="0.2"/>
+		<circle class="st8" cx="96.2" cy="47" r="0.2"/>
+		<circle class="st8" cx="96.3" cy="48.6" r="0.2"/>
+		<circle class="st8" cx="96.4" cy="50.1" r="0.2"/>
+		<circle class="st8" cx="96.6" cy="51.7" r="0.2"/>
+		<circle class="st8" cx="95.7" cy="52.6" r="0.2"/>
+		<circle class="st8" cx="98.5" cy="48.6" r="0.2"/>
+		<circle class="st8" cx="97.5" cy="49.1" r="0.2"/>
+		<circle class="st8" cx="98.6" cy="50.2" r="0.2"/>
+		<circle class="st8" cx="97.6" cy="50.7" r="0.2"/>
+		<circle class="st8" cx="95.2" cy="48" r="0.2"/>
+		<circle class="st8" cx="95.3" cy="49.8" r="0.2"/>
+		<circle class="st8" cx="95.5" cy="51.3" r="0.2"/>
+		<circle class="st8" cx="98.7" cy="51.7" r="0.2"/>
+		<circle class="st8" cx="97.7" cy="52.2" r="0.2"/>
+		<line class="st8" x1="99.4" y1="53.1" x2="97.8" y2="54.7"/>
+		<line class="st8" x1="94.8" y1="52.8" x2="93.1" y2="54.5"/>
+		<line class="st8" x1="94.9" y1="53.4" x2="93.2" y2="55.1"/>
+		<line class="st8" x1="96.1" y1="45.4" x2="93.9" y2="44.4"/>
+		<line class="st8" x1="95.8" y1="45.9" x2="93.7" y2="44.8"/>
+		
+			<ellipse transform="matrix(0.9972 -7.473009e-02 7.473009e-02 0.9972 -2.8841 7.4537)" class="st8" cx="98.2" cy="42.3" rx="0.8" ry="0.9"/>
+		<g>
+			<line x1="99.2" y1="42.6" x2="98.8" y2="42.4"/>
+			<polygon points="99.2,42.6 98.7,42.4 98.8,42.4 99.2,42.6 			"/>
+		</g>
+		<g>
+			<line x1="99.2" y1="42.9" x2="98.7" y2="42.7"/>
+			<polygon points="99.2,42.9 98.7,42.7 98.8,42.6 99.2,42.9 			"/>
+		</g>
+	</g>
+	<g>
+		<polygon class="st4" points="93.3,40.6 91.2,35.4 92.5,31.2 94.2,30.5 97.5,39 		"/>
+		<polygon class="st8" points="92.6,29.6 92.3,31.3 94.4,30.5 93.9,29.1 		"/>
+		<circle class="st8" cx="94.1" cy="31.9" r="0.2"/>
+		<circle class="st8" cx="93.3" cy="32.6" r="0.2"/>
+		<circle class="st8" cx="94.7" cy="33.3" r="0.2"/>
+		<circle class="st8" cx="93.9" cy="34.1" r="0.2"/>
+		<circle class="st8" cx="92.7" cy="34.1" r="0.2"/>
+		<circle class="st8" cx="93.3" cy="35.6" r="0.2"/>
+		<circle class="st8" cx="93.8" cy="37" r="0.2"/>
+		<circle class="st8" cx="94.4" cy="38.4" r="0.2"/>
+		<circle class="st8" cx="93.9" cy="39.6" r="0.2"/>
+		<circle class="st8" cx="95.3" cy="34.9" r="0.2"/>
+		<circle class="st8" cx="94.5" cy="35.7" r="0.2"/>
+		<circle class="st8" cx="95.9" cy="36.4" r="0.2"/>
+		<circle class="st8" cx="95.1" cy="37.2" r="0.2"/>
+		<circle class="st8" cx="92.1" cy="35.4" r="0.2"/>
+		<circle class="st8" cx="92.7" cy="37" r="0.2"/>
+		<circle class="st8" cx="93.3" cy="38.4" r="0.2"/>
+		<circle class="st8" cx="96.5" cy="37.8" r="0.2"/>
+		<circle class="st8" cx="95.7" cy="38.6" r="0.2"/>
+		<line class="st8" x1="97.5" y1="39" x2="96.5" y2="41"/>
+		<line class="st8" x1="93.1" y1="40.1" x2="91.9" y2="42.2"/>
+		<line class="st8" x1="93.3" y1="40.6" x2="92.2" y2="42.7"/>
+		<line class="st8" x1="92.1" y1="32.6" x2="89.7" y2="32.2"/>
+		<line class="st8" x1="92" y1="33.1" x2="89.6" y2="32.7"/>
+		<ellipse transform="matrix(0.9309 -0.3653 0.3653 0.9309 -4.1468 36.0403)" class="st8" cx="93.2" cy="29" rx="0.8" ry="0.9"/>
+		<g>
+			<line x1="94.2" y1="29" x2="93.8" y2="28.9"/>
+			<polygon points="94.2,29 93.8,29 93.8,28.9 94.2,29 			"/>
+		</g>
+		<g>
+			<line x1="94.3" y1="29.2" x2="93.8" y2="29.2"/>
+			<polygon points="94.3,29.2 93.8,29.2 93.8,29.2 94.3,29.2 			"/>
+		</g>
+	</g>
+	<g>
+		<polygon class="st4" points="88,28.9 84.5,24.5 84.5,20 85.9,18.9 91.6,26 		"/>
+		<polygon class="st8" points="84.1,18.5 84.3,20.2 86.1,18.8 85.2,17.7 		"/>
+		<circle class="st8" cx="86.3" cy="20.2" r="0.2"/>
+		<circle class="st8" cx="85.7" cy="21.2" r="0.2"/>
+		<circle class="st8" cx="87.2" cy="21.5" r="0.2"/>
+		<circle class="st8" cx="86.7" cy="22.4" r="0.2"/>
+		<circle class="st8" cx="85.6" cy="22.8" r="0.2"/>
+		<circle class="st8" cx="86.5" cy="24" r="0.2"/>
+		<circle class="st8" cx="87.5" cy="25.2" r="0.2"/>
+		<circle class="st8" cx="88.5" cy="26.4" r="0.2"/>
+		<circle class="st8" cx="88.3" cy="27.7" r="0.2"/>
+		<circle class="st8" cx="88.3" cy="22.8" r="0.2"/>
+		<circle class="st8" cx="87.8" cy="23.8" r="0.2"/>
+		<circle class="st8" cx="89.3" cy="24" r="0.2"/>
+		<circle class="st8" cx="88.7" cy="25" r="0.2"/>
+		<circle class="st8" cx="85.3" cy="24.2" r="0.2"/>
+		<circle class="st8" cx="86.4" cy="25.5" r="0.2"/>
+		<circle class="st8" cx="87.4" cy="26.8" r="0.2"/>
+		<circle class="st8" cx="90.2" cy="25.2" r="0.2"/>
+		<circle class="st8" cx="89.7" cy="26.2" r="0.2"/>
+		<line class="st8" x1="91.6" y1="26" x2="91.2" y2="28.3"/>
+		<line class="st8" x1="87.6" y1="28.4" x2="87.1" y2="30.7"/>
+		<line class="st8" x1="88.1" y1="28.8" x2="87.6" y2="31.1"/>
+		<line class="st8" x1="84.5" y1="21.6" x2="82.2" y2="21.9"/>
+		<line class="st8" x1="84.6" y1="22.1" x2="82.2" y2="22.4"/>
+		<ellipse transform="matrix(0.7818 -0.6235 0.6235 0.7818 7.3613 56.5426)" class="st8" cx="84.5" cy="17.8" rx="0.8" ry="0.9"/>
+		<g>
+			<line x1="85.5" y1="17.4" x2="85" y2="17.5"/>
+			<polygon points="85.5,17.4 85,17.6 85,17.5 85.5,17.4 			"/>
+		</g>
+		<g>
+			<line x1="85.7" y1="17.7" x2="85.2" y2="17.8"/>
+			<polygon points="85.7,17.7 85.2,17.8 85.2,17.7 85.7,17.7 			"/>
+		</g>
+	</g>
+	<g>
+		<polygon class="st4" points="79.5,19.1 74.9,16 73.6,11.8 74.6,10.3 82.1,15.4 		"/>
+		<polygon class="st8" points="72.8,10.4 73.5,11.9 74.7,10.1 73.5,9.3 		"/>
+		<circle class="st8" cx="75.3" cy="11.4" r="0.2"/>
+		<circle class="st8" cx="75.1" cy="12.5" r="0.2"/>
+		<circle class="st8" cx="76.6" cy="12.3" r="0.2"/>
+		<circle class="st8" cx="76.4" cy="13.4" r="0.2"/>
+		<circle class="st8" cx="75.4" cy="14.1" r="0.2"/>
+		<circle class="st8" cx="76.7" cy="15" r="0.2"/>
+		<circle class="st8" cx="77.9" cy="15.8" r="0.2"/>
+		<circle class="st8" cx="79.2" cy="16.7" r="0.2"/>
+		<circle class="st8" cx="79.4" cy="17.9" r="0.2"/>
+		<circle class="st8" cx="78" cy="13.3" r="0.2"/>
+		<circle class="st8" cx="77.8" cy="14.4" r="0.2"/>
+		<circle class="st8" cx="79.3" cy="14.2" r="0.2"/>
+		<circle class="st8" cx="79.1" cy="15.2" r="0.2"/>
+		<circle class="st8" cx="75.5" cy="15.5" r="0.2"/>
+		<circle class="st8" cx="77" cy="16.5" r="0.2"/>
+		<circle class="st8" cx="78.3" cy="17.3" r="0.2"/>
+		<circle class="st8" cx="80.6" cy="15" r="0.2"/>
+		<circle class="st8" cx="80.3" cy="16.1" r="0.2"/>
+		<line class="st8" x1="82.1" y1="15.4" x2="82.4" y2="17.7"/>
+		<line class="st8" x1="79" y1="18.8" x2="79.2" y2="21.2"/>
+		<line class="st8" x1="79.6" y1="19.1" x2="79.8" y2="21.5"/>
+		<line class="st8" x1="74" y1="13.2" x2="71.9" y2="14.2"/>
+		<line class="st8" x1="74.2" y1="13.7" x2="72.1" y2="14.7"/>
+		<ellipse transform="matrix(0.5633 -0.8262 0.8262 0.5633 23.8965 64.3885)" class="st8" cx="72.9" cy="9.6" rx="0.8" ry="0.9"/>
+		<g>
+			<line x1="73.8" y1="9" x2="73.3" y2="9.2"/>
+			<polygon points="73.8,9 73.3,9.2 73.3,9.2 73.8,9 			"/>
+		</g>
+		<g>
+			<line x1="74" y1="9.2" x2="73.5" y2="9.4"/>
+			<polygon points="74,9.2 73.6,9.4 73.5,9.3 74,9.2 			"/>
+		</g>
+	</g>
+	<g>
+		<polygon class="st4" points="68.5,12.4 63.2,10.7 60.7,7.1 61.2,5.4 69.9,8.1 		"/>
+		<polygon class="st8" points="59.5,6 60.6,7.3 61.3,5.2 59.9,4.8 		"/>
+		<circle class="st8" cx="62.2" cy="6.3" r="0.2"/>
+		<circle class="st8" cx="62.3" cy="7.4" r="0.2"/>
+		<circle class="st8" cx="63.7" cy="6.7" r="0.2"/>
+		<circle class="st8" cx="63.8" cy="7.8" r="0.2"/>
+		<circle class="st8" cx="63.1" cy="8.8" r="0.2"/>
+		<circle class="st8" cx="64.6" cy="9.2" r="0.2"/>
+		<circle class="st8" cx="66" cy="9.7" r="0.2"/>
+		<circle class="st8" cx="67.5" cy="10.1" r="0.2"/>
+		<circle class="st8" cx="68.1" cy="11.3" r="0.2"/>
+		<circle class="st8" cx="65.4" cy="7.2" r="0.2"/>
+		<circle class="st8" cx="65.5" cy="8.3" r="0.2"/>
+		<circle class="st8" cx="66.9" cy="7.7" r="0.2"/>
+		<circle class="st8" cx="67" cy="8.8" r="0.2"/>
+		<circle class="st8" cx="63.7" cy="10.1" r="0.2"/>
+		<circle class="st8" cx="65.3" cy="10.6" r="0.2"/>
+		<circle class="st8" cx="66.8" cy="11" r="0.2"/>
+		<circle class="st8" cx="68.3" cy="8.1" r="0.2"/>
+		<circle class="st8" cx="68.4" cy="9.2" r="0.2"/>
+		<line class="st8" x1="69.9" y1="8.1" x2="70.8" y2="10.1"/>
+		<line class="st8" x1="68" y1="12.2" x2="68.9" y2="14.4"/>
+		<line class="st8" x1="68.6" y1="12.3" x2="69.5" y2="14.5"/>
+		<line class="st8" x1="61.5" y1="8.3" x2="59.8" y2="9.9"/>
+		<line class="st8" x1="61.9" y1="8.7" x2="60.1" y2="10.3"/>
+		<ellipse transform="matrix(0.2948 -0.9556 0.9556 0.2948 36.8869 60.3942)" class="st8" cx="59.4" cy="5.2" rx="0.8" ry="0.9"/>
+		<g>
+			<line x1="60" y1="4.4" x2="59.7" y2="4.7"/>
+			<polygon points="60,4.4 59.7,4.7 59.7,4.7 60,4.4 			"/>
+		</g>
+		<g>
+			<line x1="60.3" y1="4.5" x2="59.9" y2="4.8"/>
+			<polygon points="60.3,4.5 60,4.8 59.9,4.8 60.3,4.5 			"/>
+		</g>
+	</g>
+</g>
+</svg>
