@@ -471,7 +471,7 @@ header.menu-banner #menu-toggle .feather {
 #menuBox ul li a .name {
   position: absolute;
   text-align: center;
-  width: 90%;
+  width: 75%;
   opacity: 0;
   display: -webkit-box;
   display: -ms-flexbox;
