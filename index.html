@@ -12,10 +12,11 @@
 
   <!-- Site style  -->
   <link rel="stylesheet" href="css/style2.min.css">
+  <link rel="stylesheet" href="css/app.css">
   <link rel="stylesheet" href="css/app.min.css">
 </head>
 
-<body>
+<body data-barba="wrapper">
 
   <div class="page">
 
@@ -25,7 +26,9 @@
           <img src="images/logo.svg" aria-hidden="true">
         </a>
       </div>
-      <button id="menu-toggle" aria-label="Show Navigation Menu" aria-expanded="false" aria-controls="menu" tabindex="0"></button>           
+      <button id="menu-toggle" aria-label="Show Navigation Menu" aria-expanded="false" aria-controls="menu" tabindex="0">
+        <div id="text-menu">Menú</div>
+      </button>           
     </header>
 
     <nav id="menuBox" aria-hidden="true" aria-labelledby="menu-toggle" role="navigation">
@@ -76,6 +79,9 @@
       <div id="terrain"></div>
       <div id="backImg" aria-hidden="true"></div>
     </nav>
+    <main data-barba="container" data-barba-namespace="home">
+      <h2>Inicio</h2>
+    </main>
     
   </div>
 
@@ -90,6 +96,14 @@
   <script src="https://unpkg.com/@barba/core"></script>
   <!-- Main -->
   <script src="js/menu.js"></script>
+  <script>
+    barba.init({
+    schema: {
+      prefix: 'data-custom',
+      wrapper: 'wrap'
+    }
+  });
+  </script>
 
 </body>
 

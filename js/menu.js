@@ -16,6 +16,7 @@ window.addEventListener('resize', () => {
 window.onresize = resizeWindow; */
 
 const menuButton = document.querySelector("#menu-toggle");
+const textMenu = document.querySelector("#text-menu");
 const menu = document.querySelector("#menuBox");
 const ulMenu = document.querySelector("#menuBox ul");
 const leadsBox = document.querySelector("#descripciones");
@@ -192,6 +193,7 @@ function menuClose() {
     onComplete: function () {
       menuButton.classList.remove("disable");
       document.body.classList.remove("menuOpen");
+      textMenu.classList.remove("hideText")
     }
   })
     .to(caminoBox, { scale: "+=0.05", rotation: i => `${dir[i].dirNo}25`, opacity: 1, duration: 0.8, ease: "power2.inOut" })
@@ -246,6 +248,8 @@ function openMenu(open) {
   gsap.utils.shuffle(pos);
   gsap.utils.shuffle(dir);
   scaleTime = gsap.utils.random(2, 2.5, .1);
+  textMenu.classList.add("hideText")
+  
 
   if (open == true) {
     [xRandom, yRandom] = [[], []];
