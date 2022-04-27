@@ -271,7 +271,7 @@ function dragPos(who) {
 
 let menuRotate = gsap.fromTo(spanMenu, { rotation: 0 }, { rotation: 360, duration: 1, transformOrigin: "50% 50%",  ease: "linear", repeat: -1, paused: true }).timeScale(0);
 
-document.querySelector("#menu-toggle").addEventListener("click", function () {
+menuButton.addEventListener("click", function () {
   menuButton.classList.add("disable");
   if (menu.ariaHidden == "true") {
     menu.ariaHidden = "false";
@@ -292,17 +292,17 @@ menuButton.addEventListener("mouseout", function () {
   gsap.to(menuRotate, { timeScale: 0, duration: 1, onComplete: function() { this.pause(); }});
 });
 
-document.querySelector("#menu-change").addEventListener("click", function (event) {
+menuChange.addEventListener("click", function (event) {
   event.preventDefault();
   caminoBox.forEach(x => { 
     x.kill();
   });
   caminos.forEach(x => x.classList.add("disable"));
   //openMenu(false);
-  gsap.to(document.querySelector("#menu-change .feather"), { opacity: 0, duration: 0.6, ease: "power2.inOut" });
+  /* gsap.to(document.querySelector("#menu-change .feather"), { opacity: 0, duration: 0.6, ease: "power2.inOut" });
   gsap.to(document.querySelector("#menu-change span"), { opacity: 1, duration: 0.6, ease: "power2.inOut" });
   gsap.to(document.querySelector("#menu-change .feather"), { opacity: 1, duration: 0.6, delay: 0.6, ease: "power2.inOut" });
-  gsap.to(document.querySelector("#menu-change span"), { opacity: 0, duration: 0.6, delay: 0.6, ease: "power2.inOut" });
+  gsap.to(document.querySelector("#menu-change span"), { opacity: 0, duration: 0.6, delay: 0.6, ease: "power2.inOut" }); */
 });
 
 // carga https://feathericons.com
