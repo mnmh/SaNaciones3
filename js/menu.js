@@ -210,11 +210,18 @@ function menuClose() {
 
 let scaleTime = gsap.utils.random(2, 2.5, .1);
 
-let myTween;
+const vTweens = {}
+for (let i = 0; i < caminos.length; i++) {
+  vTweens[`tween${i}`];
+}
 
 function caminoRota() {
   caminoBox.forEach((x, i) => {
-    gsap.to(x, { rotation: `${dir[i].dirSi}${"random(200, 300)"}`, duration: "random(3.5, 6)", transformOrigin: "50% 50%", ease: "power1.inOut", onComplete: function () { myTween = gsap.to(x, { rotation: `${dir[i].dirSi}360`, duration: 30, transformOrigin: "50% 50%", ease: "none", repeat: -1, overwrite: 'auto' }).timeScale(gsap.utils.random(0.06, 0.6)); } });
+    gsap.to(x, {
+      rotation: `${dir[i].dirSi}${"random(200, 300)"}`, duration: "random(3.5, 6)", transformOrigin: "50% 50%", ease: "power1.inOut", onComplete: function () {
+        vTweens[i] = gsap.to(x, { rotation: `${dir[i].dirSi}360`, duration: 30, transformOrigin: "50% 50%", ease: "none", repeat: -1, overwrite: 'auto' }).timeScale(gsap.utils.random(0.06, 0.6));
+      }
+    });
   });
 }
 
@@ -294,15 +301,15 @@ menuButton.addEventListener("mouseout", function () {
 
 menuChange.addEventListener("click", function (event) {
   event.preventDefault();
-  caminoBox.forEach(x => { 
-    x.kill();
-  });
+  for (let i = 0; i < caminos.length; i++) {
+    vTweens[i].kill();;
+  }
   caminos.forEach(x => x.classList.add("disable"));
-  //openMenu(false);
-  /* gsap.to(document.querySelector("#menu-change .feather"), { opacity: 0, duration: 0.6, ease: "power2.inOut" });
+  openMenu(false);
+  gsap.to(document.querySelector("#menu-change .feather"), { opacity: 0, duration: 0.6, ease: "power2.inOut" });
   gsap.to(document.querySelector("#menu-change span"), { opacity: 1, duration: 0.6, ease: "power2.inOut" });
   gsap.to(document.querySelector("#menu-change .feather"), { opacity: 1, duration: 0.6, delay: 0.6, ease: "power2.inOut" });
-  gsap.to(document.querySelector("#menu-change span"), { opacity: 0, duration: 0.6, delay: 0.6, ease: "power2.inOut" }); */
+  gsap.to(document.querySelector("#menu-change span"), { opacity: 0, duration: 0.6, delay: 0.6, ease: "power2.inOut" });
 });
 
 // carga https://feathericons.com
