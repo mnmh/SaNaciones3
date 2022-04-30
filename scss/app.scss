@@ -318,6 +318,10 @@ header.menu-banner {
     }
   }
 
+  .hideText{
+    display: none;
+  }
+
   #menu-toggle {
     z-index: 1020;
     position: absolute;
@@ -371,6 +375,9 @@ header.menu-banner {
       .feather {
         opacity: 1;
       }
+    }
+    #text-menu{
+      color: #fff;
     }
   }
 }
