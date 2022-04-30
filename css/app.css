@@ -325,9 +325,6 @@ header.menu-banner #menu-toggle .feather {
   stroke-width: 0.5px;
   opacity: 0;
 }
-.hideText{
-  display: none;
-}
 .menuOpen header.menu-banner #menu-toggle span {
   opacity: 0;
 }
