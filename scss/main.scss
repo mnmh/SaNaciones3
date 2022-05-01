@@ -394,7 +394,7 @@ section.material-didactico{
 
 
 section.vivir-semilla{
-  background-color: $olive);
+  background-color: $olive;
 }
 
 section.vivir-semilla .quote{
@@ -402,7 +402,7 @@ section.vivir-semilla .quote{
 }
 
 section.registro-victimas{
-  background-color: $olive);
+  background-color: $olive;
 }
 
 .main-banner{
@@ -417,7 +417,7 @@ section.registro-victimas{
 }
 
 .bk-olive-green, .btn-success{
-  background-color: $olive);
+  background-color: $olive;
 }
 
 .bk-dark-green{
@@ -453,7 +453,7 @@ section.registro-victimas{
 }
 
 .credits .card:nth-child(3), .credits .card:nth-child(7){
-  background-color: $olive);
+  background-color: $olive;
 }
 
 .credits .card:nth-child(4), .credits .card:nth-child(8){
@@ -547,14 +547,6 @@ section.registro-victimas{
   color: $white;
 }
 
-.lime{
-  color: $lime);
-}
-
-.bk-lime{
-  background-color: $lime);
-}
-
 .bk-aqua{
   background-color: $aqua;
 }
@@ -592,6 +584,16 @@ header a{
   padding: 10px 11px 15px;
   border-radius: 100%;
   transition: all .3s ease-in-out;
+}
+
+.main-title{
+  font-family: 'Bitter', serif;
+  font-weight: 800;
+  font-style: normal;
+  line-height: 1.2;
+  word-break: keep-all;
+  font-size: calc(2vw + 2vh);
+  margin-bottom: 2%;
 }
 
 .header-fixed .menu{
@@ -719,6 +721,11 @@ header a{
   left: 0;
 }
 
+.sanaciones-content{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
 
 .sanaciones-content{
   padding: 90px 10px;
@@ -833,7 +840,7 @@ header a{
 }
 
 .remodal-close{
-  color: $white) !important;
+  color: $white !important;
 }
 
 /****FIN MENU***/
@@ -894,7 +901,7 @@ header a{
 .nav-tabs li{
   width: 100%;
   text-align: center;
-  color: $olive);
+  color: $olive;
   border: 2px solid $yellow;
 }
 
@@ -1342,7 +1349,7 @@ padding:0;
 .timeline .timeline-body>p,
 .timeline .timeline-body>ul {
   margin-bottom: 0;
-  color:$white) !important;
+  color:$white !important;
 }
 /*Style for even div.line*/
 .timeline>li:nth-child(odd) .line:before {
