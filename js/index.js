@@ -1,8 +1,3 @@
-// You can specify which plugins you need
-import * as bootstrap from 'bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-
-
 //gsap.registerPlugin(ScrollTrigger, Draggable, Flip);
 
 /* const appHeight = () => {

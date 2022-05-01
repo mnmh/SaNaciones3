@@ -189,7 +189,7 @@ input {
   } */
 }
 body {
-  background-color: $color-green1;
+  background-color: #4260ac;
   &.programacion {
     background-color: $programacion;
     color: $color-text;
@@ -380,10 +380,6 @@ header.menu-banner {
       color: #fff;
     }
   }
-}
-
-.hideText{
-  display: none;
 }
 
 #menuBox {
