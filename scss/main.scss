@@ -586,14 +586,49 @@ header a{
   transition: all .3s ease-in-out;
 }
 
-.main-title{
+.main-title {
   font-family: 'Bitter', serif;
-  font-weight: 800;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 1;
+  word-break: keep-all;
+  font-size: calc(3vw + 3vh);
+  margin-bottom: 2%;
+    small{
+      font-size: calc(1.3vw + 1.8vh);
+  }
+}
+
+.sub-title{
+  font-family: 'Bitter', serif;
+  font-weight: 600;
   font-style: normal;
   line-height: 1.2;
   word-break: keep-all;
-  font-size: calc(2vw + 2vh);
+  font-size: calc(.8vw + .8vh);
   margin-bottom: 2%;
+}
+
+ul.transition{
+  display: flex;
+  position: absolute;
+  z-index: 10;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  pointer-events: none;
+  li{
+    transform: scaleY(0);
+    background: white;
+    width: 20%;
+  }
+}
+
+
+.clip-animate{
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 }
 
 .header-fixed .menu{
@@ -723,12 +758,6 @@ header a{
 
 .sanaciones-content{
   min-height: 100vh;
-  display: flex;
-  align-items: center;
-}
-
-.sanaciones-content{
-  padding: 90px 10px;
 }
 
 .sanaciones-content h2{

@@ -101,9 +101,9 @@ h2 {
   --max: 2.25rem; // maximum value */
 }
 p {
-  --min: 1.2rem;
-  --val: calc(0.5vw + 1rem);
-  --max: 2.2rem;
+  --min: 1rem;
+  --val: calc(0.5vw + .8rem);
+  --max: 2rem;
   font-family: 'Fira Sans', sans-serif;
   font-weight: 200;
   font-style: italic;
@@ -114,7 +114,6 @@ p {
   //max-width: 33em;
   margin-bottom: 2.5rem;
   color: beige;
-  border: 1px solid greenyellow;
 }
 
 a {
@@ -205,6 +204,7 @@ body {
       font-weight: 300;
       font-style: normal;
       line-height: 1.5;
+      border: 1px solid greenyellow;
     }
   }
 }
