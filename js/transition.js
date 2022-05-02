@@ -1,8 +1,14 @@
 function pageTransition(){
-  var tl = gsas.timeline();
+  var tl = gsap.timeline();
 
-  tl.to('ul.transition li', { duration: .5, scaleY: 1, transformOrigin: 'bottom left', stagger: .2})
-  tl.to('ul.transition li', { duration: .5, scaleY: 0, transformOrigin: 'bottom left', stagger: .1, delay: .1})
+  tl.to('ul.transition', { duration: 1, scale: 1, transformOrigin: 'center', stagger: .2})
+  tl.to('ul.transition', { duration: 1, scale: 0, transformOrigin: 'center', stagger: .1, delay: .1})
+}
+
+function contentAnimation(){
+  var tl = gsap.timeline();
+  tl.from('.left', { duration: 1.5, translateY: 50, opacity: 0, delay: 1.5})
+  tl.to('.clip-animate', { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)"}, "-=1.8")
 }
 
 function delay(n) {
@@ -17,18 +23,27 @@ function delay(n) {
 barba.init({
   sync: true,
 
-  transition: [{
+  transitions: [{
 
     async leave(data) {
 
       const done = this.async();
 
       pageTransition();
-      await delay(1500);
+      await delay(1000);
       done();
 
+    },
+
+    async enter(data) {
+      contentAnimation();
+    },
+
+    async once(data) {
+      contentAnimation(data.next.container);
     }
 
-    asyn CustomElementRegistry(data) {}
   }]
 })
+
+

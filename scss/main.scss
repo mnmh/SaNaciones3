@@ -619,11 +619,9 @@ ul.transition{
   left: 0;
   margin: 0;
   pointer-events: none;
-  li{
-    transform: scaleY(0);
-    background: white;
-    width: 20%;
-  }
+  transform: scale(0);
+  clip-path: 100%;
+  background: $dark-green;
 }
 
 
@@ -634,6 +632,41 @@ ul.transition{
 .header-fixed .menu{
   max-width: 30px;
   transition: all .3s ease-in-out;
+}
+
+.main-banner{
+  height: 80vh;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.main-banner.b-1{
+  background-image: url(../images/background-1.jpg);
+  background-attachment: fixed;
+}
+
+.clip-leave{
+  opacity: 1;
+}
+
+.clip-leave-active{
+  transition: opacity 0.75s linear;
+}
+.clip-leave-to{
+  opacity: 0;
+}
+
+.clip-enter{
+  clip-path: circle(0%);
+}
+.clip-enter-active{
+  transition: all 0.75s linear;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+}
+.clip-enter-to{
+  clip-path: circle(75%);
 }
 
 .museo-casa p{
