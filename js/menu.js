@@ -70,15 +70,22 @@ let iconMenu = document.createElement("i");
 iconMenu.ariaHidden = "true";
 iconMenu.dataset.feather = "x";
 menuButton.appendChild(iconMenu);
-let eyes = document.createElement("i");
-eyes.dataset.feather = "eye";
-menuChange.appendChild(eyes);
+let eye = document.createElement("span");
+let eyeIcon = document.createElement("i");
+eyeIcon.dataset.feather = "eye";
+eye.appendChild(eyeIcon);
+menuChange.appendChild(eye);
 let eyeClose = document.createElement("span");
 menuChange.appendChild(eyeClose);
+eye.classList.add("eye");
+eyeClose.classList.add("eyeClose");
 //menuChange.appendChild(eye.cloneNode(true));
 
+
+//gsap.to(eyes, { opacity: 0.4, duration: 1.2, ease: "power2.out" })
+
 gsap.set(caminos, { xPercent: -50, yPercent: -50 });
-gsap.set(menuChange, { top: document.querySelector("#headerBar").offsetHeight + 20})
+gsap.set(menuChange, { top: document.querySelector("#headerBar").offsetHeight + 20 });
 
 caminos.forEach(camino => {
   camino.classList.add("disable");
@@ -232,6 +239,8 @@ let openM = gsap.timeline({
   onComplete: function () {
     menuButton.classList.remove("disable");
     caminos.forEach(x => x.classList.remove("disable"));
+    blinkOn = true;
+    gsap.delayedCall(gsap.utils.random(3, 3.5), () => blinkPlay());
   }
 })
   .addLabel("terra")
@@ -255,9 +264,8 @@ function openMenu(open) {
   gsap.utils.shuffle(pos);
   gsap.utils.shuffle(dir);
   scaleTime = gsap.utils.random(2, 2.5, .1);
-  textMenu.classList.add("hideText")
+  textMenu.classList.add("hideText");
   
-
   if (open == true) {
     [xRandom, yRandom] = [[], []];
     caminos.forEach(x => {
@@ -280,7 +288,32 @@ function dragPos(who) {
     ;
 };
 
-let menuRotate = gsap.fromTo(spanMenu, { rotation: 0 }, { rotation: 360, duration: 1, transformOrigin: "50% 50%",  ease: "linear", repeat: -1, paused: true }).timeScale(0);
+let menuRotate = gsap.fromTo(spanMenu, { rotation: 0 }, { rotation: 360, duration: 1, transformOrigin: "50% 50%", ease: "linear", repeat: -1, paused: true }).timeScale(0);
+
+let blinkOn = true;
+var blink;
+function blinkPlay() {
+  blink = gsap.timeline({
+    onComplete: function () {
+      if (blinkOn == true) {
+        gsap.delayedCall(gsap.utils.random(1, 8), () => this.restart());
+      }
+    }
+  })
+    .to(eye, { opacity: 0, duration: 0.2, ease: "power2.in" })
+    .to(eyeClose, { opacity: 1, duration: 0.3, ease: "power2.in" }, "<")
+    .call(function () {
+      if (blinkOn == true) {
+        blink.resume();
+      } else {
+        blink.pause();
+        gsap.delayedCall(1.4, () => blink.resume());
+      }
+    })
+    .to(eyeClose, { opacity: 0, duration: 0.2, ease: "power2.out", delay: 0.07 })
+    .to(eye, { opacity: 1, duration: 0.3, ease: "power2.out" }, "<0.05")
+  ;
+}
 
 menuButton.addEventListener("click", function () {
   menuButton.classList.add("disable");
@@ -303,17 +336,17 @@ menuButton.addEventListener("mouseout", function () {
   gsap.to(menuRotate, { timeScale: 0, duration: 1, onComplete: function() { this.pause(); }});
 });
 
+
 menuChange.addEventListener("click", function (event) {
   event.preventDefault();
+  blinkOn = false;
+  blink.clear();
+  blinkPlay();
   for (let i = 0; i < caminos.length; i++) {
     vTweens[i].kill();;
   }
   caminos.forEach(x => x.classList.add("disable"));
   openMenu(false);
-  gsap.to(document.querySelector("#menu-change .feather"), { opacity: 0, duration: 0.6, ease: "power2.inOut" });
-  gsap.to(document.querySelector("#menu-change span"), { opacity: 1, duration: 0.6, ease: "power2.inOut" });
-  gsap.to(document.querySelector("#menu-change .feather"), { opacity: 1, duration: 0.6, delay: 0.6, ease: "power2.inOut" });
-  gsap.to(document.querySelector("#menu-change span"), { opacity: 0, duration: 0.6, delay: 0.6, ease: "power2.inOut" });
 });
 
 // carga https://feathericons.com

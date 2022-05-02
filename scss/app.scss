@@ -398,9 +398,9 @@ header.menu-banner {
   height: calc(var(--vh, 1vh) * 100);
   overflow: hidden;
   z-index: 500;
-  visibility: visible;
-  opacity: 1;
-  //pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
   transition: opacity 0.5s, visibility 0.5s;
 
   .menuOpen & {
@@ -422,15 +422,18 @@ header.menu-banner {
     align-items: center;
     justify-content: center;
 
-    .feather {
-      opacity: 1;
+    .eye {
       width: 100%;
       height: 100%;
-      stroke: salmon;
-      stroke-width: 0.5px;
-      transition: all 0.2s ease-out;
+      .feather {
+        width: 100%;
+        height: 100%;
+        stroke: salmon;
+        stroke-width: 0.5px;
+        transition: all 0.2s ease-out;
+      }
     }
-    span {
+    .eyeClose {
       opacity: 0;
       position: absolute;
       width: 100%;
@@ -443,13 +446,13 @@ header.menu-banner {
       -webkit-mask-image: url("../images/eye-close.svg");
       mask-image: url("../images/eye-close.svg");
     }
-    &:hover {
+    /* &:hover {
       .feather {
         width: 100%;
         height: 100%;
         stroke-width: 0.8px;
       }
-    }
+    } */
     .menuOpen & {
       visibility: visible;
       pointer-events: auto;
