@@ -258,14 +258,15 @@ header.menu-banner #headerBar a#logo img {
   height: 100%;
   visibility: hidden;
 }
+header.menu-banner .hideText {
+  display: none;
+}
 header.menu-banner #menu-toggle {
   z-index: 1020;
   position: absolute;
-  font-family: "Bitter", serif;
-  color: #fff;
-  width: 100px;
-  height: 100px;
-  top: 20px;
+  width: 70px;
+  height: 70px;
+  top: 5px;
   right: 20px;
   cursor: pointer;
   background: transparent;
@@ -289,7 +290,7 @@ header.menu-banner #menu-toggle span {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-color: salmon;
+  background-color: white;
   opacity: 1;
   -webkit-transform-origin: center;
           transform-origin: center;
@@ -325,12 +326,14 @@ header.menu-banner #menu-toggle .feather {
   stroke-width: 0.5px;
   opacity: 0;
 }
-
 .menuOpen header.menu-banner #menu-toggle span {
   opacity: 0;
 }
 .menuOpen header.menu-banner #menu-toggle .feather {
   opacity: 1;
+}
+header.menu-banner #menu-toggle #text-menu {
+  color: #fff;
 }
 
 #menuBox {
@@ -358,8 +361,9 @@ header.menu-banner #menu-toggle .feather {
   height: calc(var(--vh, 1vh) * 100);
   overflow: hidden;
   z-index: 500;
-  visibility: visible;
-  opacity: 1;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
   -webkit-transition: opacity 0.5s, visibility 0.5s;
   transition: opacity 0.5s, visibility 0.5s;
 }
@@ -371,7 +375,6 @@ header.menu-banner #menu-toggle .feather {
 #menuBox #menu-change {
   position: absolute;
   visibility: hidden;
-  opacity: 0;
   width: 56px;
   height: 56px;
   pointer-events: none;
@@ -388,9 +391,19 @@ header.menu-banner #menu-toggle .feather {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  /* &:hover {
+    .feather {
+      width: 100%;
+      height: 100%;
+      stroke-width: 0.8px;
+    }
+  } */
 }
-#menuBox #menu-change .feather {
-  opacity: 1;
+#menuBox #menu-change .eye {
+  width: 100%;
+  height: 100%;
+}
+#menuBox #menu-change .eye .feather {
   width: 100%;
   height: 100%;
   stroke: salmon;
@@ -398,7 +411,7 @@ header.menu-banner #menu-toggle .feather {
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-#menuBox #menu-change span {
+#menuBox #menu-change .eyeClose {
   opacity: 0;
   position: absolute;
   width: 100%;
@@ -410,11 +423,6 @@ header.menu-banner #menu-toggle .feather {
   mask-position: center;
   -webkit-mask-image: url("../images/eye-close.svg");
   mask-image: url("../images/eye-close.svg");
-}
-#menuBox #menu-change:hover .feather {
-  width: 100%;
-  height: 100%;
-  stroke-width: 0.8px;
 }
 .menuOpen #menuBox #menu-change {
   visibility: visible;
