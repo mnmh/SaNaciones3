@@ -1,11 +1,14 @@
 gsap.registerPlugin(ScrollTrigger, Draggable);
 
+const body = document.querySelector('body');
+
 //Page transition  
 function pagetransition(){
-  var tl = gsap.timeline();
-  tl.to("#trans", {duration: .5, scaleY: 1, transformOrigin: 'bottom', ease: Power3.easeInOut});
-  tl.to("#trans", {duration: .5, scaleY: 0, transformOrigin: 'top', ease: Power3.easeInOut, delay: 0 })
-  
+  var tl = gsap.timeline()
+    .to("#trans", { duration: .5, scaleY: 1, transformOrigin: 'bottom', ease: Power3.easeInOut })
+    .to("#trans", { duration: .5, scaleY: 0, transformOrigin: 'top', ease: Power3.easeInOut, delay: 0 })
+    ;
+  body.className = "disposicion";
 }
 
 //Function to Delay
@@ -93,16 +96,14 @@ let dir = [
 
 let ulWidth = ulMenu.clientWidth;
 let ulHeight = ulMenu.clientHeight;
-let toush = false;
+/* let toush = false;
 let big = 0.05;
-let lastBig = "";
+let lastBig = ""; */
 
-if ("ontouchstart" in document.documentElement) {
+/* if ("ontouchstart" in document.documentElement) {
   toush = true;
   big = 0.1;
-} else {
-  document.querySelector("body").classList.add("desk");
-}
+} */
 
 let spanMenu = document.createElement("span");
 spanMenu.ariaHidden = "true";
