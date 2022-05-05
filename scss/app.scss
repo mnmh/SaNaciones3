@@ -114,7 +114,6 @@ p {
   //max-width: 33em;
   margin-bottom: 2.5rem;
   color: beige;
-  border: 1px solid greenyellow;
 }
 
 a {
@@ -1668,4 +1667,54 @@ header.menu-banner {
     z-index: 10;
     border: 2px solid yellow;
   }
+}
+
+
+
+.temp {
+  width: fit-content; 
+  margin: 10% auto;
+  display: flex;
+  flex-flow: column nowrap;
+
+  h1 {
+    font-size: 10vw;
+    line-height: 0.8;
+    margin-bottom: 50px;
+    color: salmon;
+  }
+}
+
+#trans{
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  color: white;
+  pointer-events: none;
+  transform: scaleY(0);
+  position: absolute;
+  z-index: 100;
+}
+
+.loadText{
+  position: absolute;
+  transform-origin: center;
+  transform: translateX(-50%) translateY(-50%);    
+  left: 50%;
+  top: 50%;
+  z-index: 1000;  
+  color: white;
+  opacity: 1;
+}
+
+.cta{
+  display: inline-block;
+  padding: 0 10px;
+  background-color: salmon;
+  color: $color-text;
+}
+
+main{
+    display: flex;
+    position: relative;
 }

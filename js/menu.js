@@ -1,5 +1,47 @@
 gsap.registerPlugin(ScrollTrigger, Draggable);
 
+//Page transition  
+function pagetransition(){
+  var tl = gsap.timeline();
+  tl.to("#trans", {duration: .5, scaleY: 1, transformOrigin: 'bottom', ease: Power3.easeInOut});
+  tl.to("#trans", {duration: .5, scaleY: 0, transformOrigin: 'top', ease: Power3.easeInOut, delay: 0 })
+  
+}
+
+//Function to Delay
+function delay(n){
+  n = n || 2000;
+  return new Promise( done =>{
+      setTimeout(()=>{
+          done();
+      },n)
+  })
+}
+
+barba.init({
+  //we need sync
+  sync: true,
+  preventRunning: true,
+  //the transitions array
+  transitions: [{
+    name: 'Amazing transition',
+    from: {
+      custom: ({ trigger }) => {
+        return trigger.classList && trigger.classList.contains('prueba');
+      }
+    }, 
+    //When the user leaves the page
+    async leave(data) {
+      const done = this.async();
+      //call page transition function
+      pagetransition();
+      //give a small delay
+      await delay(500);
+      done();
+    }
+  }],
+});
+
 let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 window.addEventListener('resize', () => {
@@ -336,7 +378,6 @@ menuButton.addEventListener("mouseout", function () {
   gsap.to(menuRotate, { timeScale: 0, duration: 1, onComplete: function() { this.pause(); }});
 });
 
-
 menuChange.addEventListener("click", function (event) {
   event.preventDefault();
   blinkOn = false;
@@ -349,8 +390,9 @@ menuChange.addEventListener("click", function (event) {
   openMenu(false);
 });
 
-// carga https://feathericons.com
-feather.replace();
+
+
+
 
 
 
