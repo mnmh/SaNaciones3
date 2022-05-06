@@ -173,7 +173,7 @@ caminos.forEach(camino => {
     gsap.to(others, { opacity: 0.2, duration: 0.5, ease: "power2.inOut" });
     gsap.set(camino, { zIndex: 20 })
     gsap.to(camino, { opacity: 1, duration: 0.5, ease: "power2.inOut" });
-    gsap.to(backImg, { opacity: 1, duration: 0.5, ease: "power2.inOut" });
+    gsap.to(backImg, { opacity: 0.8, duration: 0.5, ease: "power2.inOut" });
     gsap.to(backOthers, { opacity: 0, duration: 0.5, ease: "power2.inOut" });
     camino.tl.play();
   }
