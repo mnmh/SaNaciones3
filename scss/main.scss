@@ -329,6 +329,7 @@ h1{
 h2{
   font-size: 80px;
   font-weight: bold;
+  font-family: 'Bitter', serif !important;
 }
 
 h3{
@@ -609,21 +610,42 @@ header a{
   margin-bottom: 2%;
 }
 
-ul.transition{
-  display: flex;
-  position: absolute;
-  z-index: 10;
-  height: 100vh;
-  width: 100%;
-  top: 0;
-  left: 0;
-  margin: 0;
-  pointer-events: none;
-  transform: scale(0);
-  clip-path: 100%;
+.transition{
+  position: fixed;
+  left: 50%;
+  right: 0;
+  top: 50%;
+  bottom: 0;
+  margin-top: -400px;
+  margin-left: -400px;
+  border-radius: 50%;
+  width: 800px;
+  height: 800px;
   background: $dark-green;
+  z-index: 1001;
+  pointer-events: none;
+  vertical-align: middle;
+  transform: scale(0);
 }
 
+.page-title{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  opacity: 0;
+  z-index: 1002;
+  transform: scale(0);
+  h2{
+    color: $yellow;
+    text-align: center;
+    font-size: 100px;
+    font-weight: 600;
+  }
+}
 
 .clip-animate{
   clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
@@ -1935,4 +1957,24 @@ section {
 
 section.active {
   color: orange;
+}
+
+/***ANIMATIONS***/
+
+.rotate{
+  -webkit-animation:spin 20s linear infinite;
+  -moz-animation:spin 20s linear infinite;
+  animation:spin 20s linear infinite;
+}
+@-moz-keyframes spin { 
+  100% { -moz-transform: rotate(360deg); } 
+}
+@-webkit-keyframes spin { 
+  100% { -webkit-transform: rotate(360deg); } 
+}
+@keyframes spin { 
+  100% { 
+      -webkit-transform: rotate(360deg); 
+      transform:rotate(360deg); 
+  } 
 }
