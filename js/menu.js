@@ -1,15 +1,28 @@
 gsap.registerPlugin(ScrollTrigger, Draggable);
 
-const body = document.querySelector('body');
-
-//Page transition  
-function pagetransition(){
-  var tl = gsap.timeline()
-    .to("#trans", { duration: .5, scaleY: 1, transformOrigin: 'bottom', ease: Power3.easeInOut })
-    .to("#trans", { duration: .5, scaleY: 0, transformOrigin: 'top', ease: Power3.easeInOut, delay: 0 })
-    ;
-  body.className = "disposicion";
+const body = document.querySelector("body");
+let terrain = document.querySelector(".terrain");
+terrain.classList.add("is-active");
+var caminoSel;
+const bodyEnter = () => {
+  //body.classList.remove("off");
+  //terrain.classList.remove("is-active");
+  //terrain = document.querySelector(".terrain");
+  /* terrain.style.setProperty('--x', `${Math.round(caminoSel.x)}px`);
+  terrain.style.setProperty('--y', `${Math.round(caminoSel.y)}px`); */
+  //gsap.delayedCall(1, () => terrain.classList.add("is-active"));
+  //console.log(`${Math.round(caminoSel.x)} - ${Math.round(caminoSel.y)}`);
+  //document.querySelector(".terrain").classList.add("is-active");
+  console.log("listo!");
 }
+//document.addEventListener("DOMContentLoaded", bodyEnter);
+
+const preventScroll = e => {
+  e.preventDefault();
+  e.stopPropagation();
+}
+const disableScroll = () => body.addEventListener('wheel', preventScroll);
+const enableScroll = () => body.removeEventListener('wheel', preventScroll);
 
 //Function to Delay
 function delay(n){
@@ -21,27 +34,39 @@ function delay(n){
   })
 }
 
+barba.hooks.beforeEnter((data) => {
+  window.scrollTo(0, 0);
+});
+/* barba.hooks.after(() => {
+  bodyEnter();
+}); */
+
 barba.init({
-  //we need sync
-  sync: true,
+  timeout: 10000,
   preventRunning: true,
   //the transitions array
   transitions: [{
-    name: 'Amazing transition',
-    from: {
+    name: 'menu-transition',
+    before(data) {
+      /* return gsap.to(data.current.container, {
+        opacity: 0
+      }); */
+    },
+    async leave(data) {
+      const done = this.async();
+      menuClose(caminoSel);
+      await delay(5500);
+      done();
+    },
+    async afterEnter(data) {
+      return data.next.container.querySelector(".terrain").classList.add("is-active");
+      //console.log(data.next.container.querySelector(".terrain"));
+    },
+    /* from: {
       custom: ({ trigger }) => {
         return trigger.classList && trigger.classList.contains('prueba');
       }
-    }, 
-    //When the user leaves the page
-    async leave(data) {
-      const done = this.async();
-      //call page transition function
-      pagetransition();
-      //give a small delay
-      await delay(500);
-      done();
-    }
+    }, */ 
   }],
 });
 
@@ -65,10 +90,9 @@ const textMenu = document.querySelector("#text-menu");
 const menu = document.querySelector("#menuBox");
 const ulMenu = document.querySelector("#menuBox ul");
 const leadsBox = document.querySelector("#descripciones");
-const backImgBox = document.querySelector("#backImg");
+//const backImgBox = document.querySelector("#backImg");
 const caminos = Array.from(document.querySelectorAll("#menuBox ul li"));
 const caminosLink = Array.from(document.querySelectorAll("#menuBox li a"));
-const terrain = document.querySelectorAll("#terrain");
 const menuChange = document.querySelector("#menu-change");
 let vel = [-1, -2, -3, -4, 1, 2, 3, 4, 5, 6, 7, 8];
 let [backDivs, descripciones, pos, xRandom, yRandom] = [[], [], [], [], []];
@@ -96,14 +120,6 @@ let dir = [
 
 let ulWidth = ulMenu.clientWidth;
 let ulHeight = ulMenu.clientHeight;
-/* let toush = false;
-let big = 0.05;
-let lastBig = ""; */
-
-/* if ("ontouchstart" in document.documentElement) {
-  toush = true;
-  big = 0.1;
-} */
 
 let spanMenu = document.createElement("span");
 spanMenu.ariaHidden = "true";
@@ -124,11 +140,11 @@ eye.classList.add("eye");
 eyeClose.classList.add("eyeClose");
 //menuChange.appendChild(eye.cloneNode(true));
 
-
 //gsap.to(eyes, { opacity: 0.4, duration: 1.2, ease: "power2.out" })
 
 gsap.set(caminos, { xPercent: -50, yPercent: -50 });
 gsap.set(menuChange, { top: document.querySelector("#headerBar").offsetHeight + 20 });
+//gsap.to("main", { opacity: 1, duration: 1, delay: 1 });
 
 caminos.forEach(camino => {
   camino.classList.add("disable");
@@ -153,7 +169,7 @@ caminos.forEach(camino => {
   descripciones.push(descripcion);
   
   let backImg = document.createElement("div");
-  backImgBox.appendChild(backImg);
+  document.querySelector("#backImg").appendChild(backImg);
   backDivs.push(backImg);
 
   let others = caminos.filter(y => y !== camino);
@@ -173,7 +189,8 @@ caminos.forEach(camino => {
     gsap.to(others, { opacity: 0.2, duration: 0.5, ease: "power2.inOut" });
     gsap.set(camino, { zIndex: 20 })
     gsap.to(camino, { opacity: 1, duration: 0.5, ease: "power2.inOut" });
-    gsap.to(backImg, { opacity: 0.8, duration: 0.5, ease: "power2.inOut" });
+    gsap.to(backImg, { opacity: 0.7, duration: 0.5, ease: "power2.inOut" });
+    gsap.to(terrain, { opacity: 0.6, duration: 0.5, ease: "power2.inOut" });
     gsap.to(backOthers, { opacity: 0, duration: 0.5, ease: "power2.inOut" });
     camino.tl.play();
   }
@@ -181,6 +198,7 @@ caminos.forEach(camino => {
     camino.removeAttribute('data-over');
     gsap.to(caminos, { opacity: 1, duration: 0.5, ease: "power2.out" });
     gsap.to(backImg, { opacity: 0, duration: 0.5, ease: "power2.out" });
+    gsap.to(terrain, { opacity: 0.2, duration: 0.4, ease: "power2.out" });
     camino.tl.reverse();
   }
   
@@ -213,6 +231,11 @@ caminos.forEach(camino => {
       gsap.to(descripcion, { height: "auto", opacity: 1, duration: 0.5, ease: "power2.out" });
     }
   }, false);
+  camino.addEventListener("click", function (event) {
+    event.preventDefault();
+    caminoSel = this;
+    console.log(caminoSel);
+  });
 })
 
 const names = Array.from(document.querySelectorAll("#menuBox .name"));
@@ -220,7 +243,7 @@ const arrows = Array.from(document.querySelectorAll("#menuBox .arrow .feather"))
 const caminoBox = Array.from(document.querySelectorAll("#menuBox .trama"));
 
 gsap.set(caminoBox, { scale: 0.4, transformOrigin: "50% 50%", opacity: 0 });
-gsap.set(terrain, { width: "200%", height: "200%" });
+//gsap.set(terrain, { width: "200%", height: "200%" });
 
 function menuParall() {
   gsap.utils.shuffle(vel);
@@ -235,28 +258,35 @@ function parall(e) {
   })
 }
 
-function menuClose() {
+function menuClose(who) {
+  menu.ariaHidden = "true";
+  menuButton.ariaExpanded = "false";
   document.removeEventListener('mousemove', parall);
   caminos.forEach(x => x.classList.add("disable"));
   let scaleTime = gsap.utils.random(1.5, 2, .1);
+  
   gsap.timeline({
     onComplete: function () {
       menuButton.classList.remove("disable");
       document.body.classList.remove("menuOpen");
-      textMenu.classList.remove("hideText")
+      textMenu.classList.remove("hideText");
+      //gsap.set("main", { pointerEvents: "auto" });
+      enableScroll();
+      caminoSel = who.getBoundingClientRect();
     }
   })
     .to(caminoBox, { scale: "+=0.05", rotation: i => `${dir[i].dirNo}25`, opacity: 1, duration: 0.8, ease: "power2.inOut" })
     .addLabel("walk")
     .to(menuChange, { autoAlpha: 0, duration: 1, ease: "power2.inOut" })
-    .to(caminos, { x: 0, y: 0, left: i => pos[i].left, top: i => pos[i].top, duration: scaleTime, ease: "power2.inOut", delay: 0.3 }, "walk")
+    .to(caminos, {
+      x: 0, y: 0, left: i => pos[i].left, top: i => pos[i].top, duration: scaleTime, ease: "power2.inOut", delay: 0.3 }, "walk")
     .to(names, { opacity: 0, duration: scaleTime, ease: "power2.inOut", delay: 0.09 }, "walk")
     .to(caminoBox, { scale: 0.4, duration: scaleTime, transformOrigin: "50% 50%", ease: "power2.inOut", delay: 0.3 }, "walk")
     .to(caminoBox, { rotation: i => `${dir[i].dirSi}${"random(150, 200)"}`, duration: "random(2, 2.8, .1)", transformOrigin: "50% 50%", ease: "power2.inOut" }, "walk")
-    .to(terrain, { width: "200%", height: "200%", duration: 2.6, ease: "power1.inOut" }, "walk+=0.2")
-    .to(terrain, { opacity: 0, duration: 2, ease: "power1.inOut" }, "<")
+    .to(terrain, { opacity: 0.2, duration: 2, ease: "power1.inOut" }, "<")
     .to(caminoBox, { opacity: 0, duration: 0.9, ease: "power2.inOut" }, "-=1.5")
-    .to(backImgBox, { opacity: 0, duration: 0.7, ease: "power1.inOut" }, ">-1")
+    .to(backDivs, { opacity: 0, duration: 0.7, ease: "power1.inOut" }, ">-1")
+    //.to("main", { opacity: 1, duration: 0.5 }, "-=0.2")
   ;
 }
 
@@ -287,13 +317,12 @@ let openM = gsap.timeline({
   }
 })
   .addLabel("terra")
-  .to(terrain, { opacity: 0.4, duration: 1.2, ease: "power2.out" })
+  //.to(terrain, { opacity: 1, duration: 1.2, ease: "power2.out" })
   .to(caminoBox, { opacity: 1, duration: 0.6, ease: "power2.inOut" }, "terra")
   .to(caminoBox, { scale: "-=0.05", rotation: i => `${dir[i].dirNo}25`, duration: 1.2, ease: "power2.inOut" }, "terra")
   .addLabel("walk")
   .call(caminoRota)
-  .to(terrain, { width: "130%", height: "130%", duration: `${scaleTime + 0.6}`, ease: "power1.inOut" }, "walk+=0.4")
-  .to(backImgBox, { opacity: 1, duration: 1, ease: "power1.inOut" }, "walk+=0.4")
+  //.to(backDivs, { opacity: 1, duration: 1, ease: "power1.inOut" }, "walk+=0.4")
   .to(caminos, { x: 0, y: 0, left: i => pos[i].left, top: i => pos[i].top, duration: scaleTime, ease: "power2.inOut" }, "walk+=0.8")
   .to(caminoBox, { scale: "random(0.95, 1.25)", duration: scaleTime, transformOrigin: "50% 50%", ease: "power1.inOut"}, "walk+=0.8")
   .to(names, { opacity: 1, duration: scaleTime, ease: "power2.inOut" }, "walk+=1")
@@ -302,12 +331,18 @@ let openM = gsap.timeline({
 ;
 
 function openMenu(open) {
+  menu.ariaHidden = "false";
+  menuButton.ariaExpanded = "true";
+  document.body.classList.add("menuOpen");
   document.removeEventListener('mousemove', parall);
   posRandom();
   gsap.utils.shuffle(pos);
   gsap.utils.shuffle(dir);
   scaleTime = gsap.utils.random(2, 2.5, .1);
   textMenu.classList.add("hideText");
+  //gsap.to("main", { opacity: 0, duration: 0.5 });
+  //gsap.set("main", { pointerEvents: "none" });
+  disableScroll();
   
   if (open == true) {
     [xRandom, yRandom] = [[], []];
@@ -361,13 +396,8 @@ function blinkPlay() {
 menuButton.addEventListener("click", function () {
   menuButton.classList.add("disable");
   if (menu.ariaHidden == "true") {
-    menu.ariaHidden = "false";
-    menuButton.ariaExpanded = "true";
-    document.body.classList.add("menuOpen");
     openMenu(true);
   } else {
-    menu.ariaHidden = "true";
-    menuButton.ariaExpanded = "false";
     menuClose();
   }
 });
@@ -390,6 +420,7 @@ menuChange.addEventListener("click", function (event) {
   caminos.forEach(x => x.classList.add("disable"));
   openMenu(false);
 });
+
 
 
 

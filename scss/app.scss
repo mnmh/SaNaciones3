@@ -76,6 +76,7 @@ html {
   font-size: 100%;
 }
 body {
+  position: relative;
   padding: 0;
   margin: 0;
   //min-height: 100vh;
@@ -188,11 +189,12 @@ input {
   } */
 }
 body {
+  background-color: white;
   transition: background-color 0.5s linear 0.2s;
-  &.home {
+  &.homeBody {
     background-color: #4260ac;
   }
-  &.disposicion {
+  &.disposicionBody {
     background-color: #9053a1;
   }
   &.programacion {
@@ -211,6 +213,9 @@ body {
       font-style: normal;
       line-height: 1.5;
     }
+  }
+  &.off {
+    background-color: transparent;
   }
 }
 main {
@@ -420,7 +425,7 @@ header.menu-banner {
     width: 56px;
     height: 56px;
     pointer-events: none;
-    z-index: 5000;
+    z-index: 600;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -465,6 +470,7 @@ header.menu-banner {
     }
   }
   ul {
+    z-index: 600;
     flex: 1;
     position: relative;
     margin: 0;
@@ -483,7 +489,7 @@ header.menu-banner {
       display: flex;
       align-items: center;
       justify-content: center;
-      z-index: 10;
+      z-index: 600;
       opacity: 1;
       border-radius: 50%;
 
@@ -624,34 +630,14 @@ header.menu-banner {
     }
   }
 
-  #terrain {
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    left: 0;
-    width: 160%;
-    height: 160%;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    background-color: $color-green2;
-    -webkit-mask-image: url("../images/terrain.svg");
-    mask-image: url("../images/terrain.svg");
-    mix-blend-mode: difference;
-  }
-
   #backImg {
-    opacity: 0;
+    opacity: 1;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: $color-green2;
-
-    .disposicion & {
-      background-color: #9053a1;
-    }
+    z-index: -100;
 
     div {
       position: absolute;
@@ -659,36 +645,92 @@ header.menu-banner {
       height: 100%;
       top: 0;
       left: 0;
-      z-index: 1;
       opacity: 0;
-      transition: opacity 0.5s ease-out;
-      //mix-blend-mode: multiply;
-
-      &::after {
-        position: absolute;
-        content: "";
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        mix-blend-mode: overlay;
-        opacity: 0.6;
-      }
+      z-index: -100;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-blend-mode: overlay;
+      mix-blend-mode: difference;
 
       @for $i from 1 through 5 {
         &:nth-child(#{$i}) {
+          @include respondImg("menu-back-" + $i, "jpg");
           background-color: darken((nth($colors-caminos, $i)), 30%);
-          &::after {
-            @include respondImg("menu-back-" + $i, "jpg");
-          }
         }
       }
     }
   }
 }
+
+.terrain {
+  --mask: circle(300px at var(--x, 50vw) var(--y, 50vh));
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  transition: all 0.75s cubic-bezier(0.5, 0.7, 0.4, 1);
+  background-color: white;
+  clip-path: var(--mask);
+
+  &.is-active {
+    --mask: circle(75% at var(--x, 50vw) var(--y, 50vh));
+  }
+  .disposicion & {
+    background-color: #9053a1;
+  }
+  .home & {
+    background-color: lightpink;
+  }
+  .terrainIn {
+    pointer-events: none;
+    position: absolute;
+    opacity: 0.2;
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: black;
+    mix-blend-mode: overlay;
+    -webkit-mask-size: contain;
+      mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat; 
+    -webkit-mask-position: center top;
+      mask-position: center top;
+    -webkit-mask-origin: border-box;
+      mask-origin: border-box;
+  
+    .home & {
+      -webkit-mask-image: url("../images/terrain.svg");
+      mask-image: url("../images/terrain.svg");
+    }
+    .disposicion & {
+      -webkit-mask-image: url("../images/terrain-disposicion.svg");
+      mask-image: url("../images/terrain-disposicion.svg");
+    }
+    .territorios & {
+      -webkit-mask-image: url("../images/terrain-territorios.svg");
+      mask-image: url("../images/terrain-territorios.svg");
+    }
+    .resistencias & {
+      -webkit-mask-image: url("../images/terrain-resistencias.svg");
+      mask-image: url("../images/terrain-resistencias.svg");
+    }
+    .fuerza & {
+      -webkit-mask-image: url("../images/terrain-fuerza.svg");
+      mask-image: url("../images/terrain-fuerza.svg");
+    }
+    .naciones & {
+      -webkit-mask-image: url("../images/terrain-naciones.svg");
+      mask-image: url("../images/terrain-naciones.svg");
+    }
+  }
+}
+
 
 @keyframes izq {
   from {
@@ -1679,6 +1721,7 @@ header.menu-banner {
 
 .temp {
   width: fit-content; 
+  max-width: 800px;
   margin: 10% auto;
   display: flex;
   flex-flow: column nowrap;
@@ -1692,26 +1735,16 @@ header.menu-banner {
   }
 }
 
-#trans{
-  width: 100%;
-  height: 100%;
-  background-color: black;
+.trans{
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent;
   color: white;
   pointer-events: none;
-  transform: scaleY(0);
   position: absolute;
   z-index: 200;
-}
-
-.loadText{
-  position: absolute;
-  transform-origin: center;
-  transform: translateX(-50%) translateY(-50%);    
-  left: 50%;
-  top: 50%;
-  z-index: 1000;  
-  color: white;
-  opacity: 1;
+  clip-path: circle(40%);
 }
 
 .cta{
@@ -1724,6 +1757,7 @@ header.menu-banner {
 main{
     display: flex;
     position: relative;
+    z-index: 100;
 }
 
 .back {
