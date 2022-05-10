@@ -1,3 +1,4 @@
+import barba from '@barba/core';
 
 /*function pageTransition(){
   var tl = gsap.timeline();
