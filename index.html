@@ -19,81 +19,76 @@
   <link rel="stylesheet" href="css/app.min.css">
 </head>
 
-<body data-barba="wrapper">
+<body data-barba="wrapper" class="homeBody off">
+
   <header class="menu-banner">
     <div id="headerBar">
-      <a href="./index.html" aria-label="Ir al inicio" id="logo">
-        <img src="https://museodememoria.gov.co/sanaciones/multimedia/logo-sanaciones-01.svg" aria-hidden="true">
+      <a href="1-disposicion-dialogo.html" aria-label="Ir al inicio" id="logo">
+        <img src="images/logo.svg" aria-hidden="true">
       </a>
-      <a href="./1-disposicion-dialogo.html">Prueba</a>
     </div>
-    <button id="menu-toggle" aria-label="Show Navigation Menu" aria-expanded="false" aria-controls="menu"
-      tabindex="0">
+    <button id="menu-toggle" aria-label="Show Navigation Menu" aria-expanded="false" aria-controls="menu" tabindex="0">
       <div id="text-menu">Menú</div>
-    </button>
+    </button>           
   </header>
 
-  <div class="transition">
-  </div>
-
+  <nav id="menuBox" aria-hidden="true" aria-labelledby="menu-toggle" role="navigation">
+    <div id="menu-change" aria-hidden="true"></div>
+    <ul>
+      <li>
+        <a href="disposicion-dialogo.html" aria-label="Ir al camino disposición al diálogo">
+          <div class="name">
+            <div class="title">Disposición<br>al diálogo</div>
+            <div class="lead">En todos los ámbitos de la vida y esencial en sus procesos de sanación</div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="disposicion-dialogo.html" aria-label="Ir al camino territorios">
+          <div class="name">
+            <div class="title">Territorios</div>
+            <div class="lead">Conectan con lo sagrado y permiten ver las huellas que ha dejado el conflicto armado</div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="disposicion-dialogo.html" aria-label="Ir al camino resistencias históricas de los pueblos indígenas">
+          <div class="name">
+            <div class="title">Resistencias<br>históricas</div>
+            <div class="lead">Reinterpretan su memoria desde la palabra de vida y conocimiento</div>
+          </div> 
+        </a>
+      </li>
+      <li>
+        <a href="disposicion-dialogo.html" aria-label="Ir al camino la fuerza de lo colectivo">
+          <div class="name">
+            <div class="title">La fuerza de<br>lo colectivo</div>
+            <div class="lead">Unidos son más fuertes para enfrentar la violencia de actores armados</div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="disposicion-dialogo.html" aria-label="Ir al camino Naciones">
+          <div class="name">
+            <div class="title">Naciones</div>
+            <div class="lead">Involucra la cosmovisión, la autonomía y la autodeterminación</div>
+          </div>
+        </a>
+      </li>
+    </ul>
+    <div id="descripciones" aria-hidden="true"></div>
+    
+    <div id="backImg" aria-hidden="true"></div>
+    
+  </nav>
   <div class="page wrapper">
     <section class="indice">
-      <main data-barba="container" data-barba-namespace="home" class="clip-transition">
+      <main data-barba="container" data-barba-namespace="home" class="home">
         <div class="page-title">
           <h2>
             Disposición al dialogo
           </h2>
-        </div> 
-        <nav id="menuBox" aria-hidden="true" aria-labelledby="menu-toggle" role="navigation">
-          <div id="menu-change" aria-hidden="true"></div>
-          <ul>
-            <li>
-              <a href="./1-disposicion-dialogo.html" aria-label="Ir al camino disposición al diálogo">
-                <div class="name">
-                  <div class="title">Disposición<br>al diálogo</div>
-                  <div class="lead">En todos los ámbitos de la vida y esencial en sus procesos de sanación</div>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="./1-disposicion-dialogo.html" aria-label="Ir al camino territorios">
-                <div class="name">
-                  <div class="title">Territorios</div>
-                  <div class="lead">Conectan con lo sagrado y permiten ver las huellas que ha dejado el conflicto armado
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="./1-disposicion-dialogo.html"
-                aria-label="Ir al camino resistencias históricas de los pueblos indígenas">
-                <div class="name">
-                  <div class="title">Resistencias<br>históricas</div>
-                  <div class="lead">Reinterpretan su memoria desde la palabra de vida y conocimiento</div>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="./1-disposicion-dialogo.html" aria-label="Ir al camino la fuerza de lo colectivo">
-                <div class="name">
-                  <div class="title">La fuerza de<br>lo colectivo</div>
-                  <div class="lead">Unidos son más fuertes para enfrentar la violencia de actores armados</div>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="./1-disposicion-dialogo.html" aria-label="Ir al camino Naciones">
-                <div class="name">
-                  <div class="title">Naciones</div>
-                  <div class="lead">Involucra la cosmovisión, la autonomía y la autodeterminación</div>
-                </div>
-              </a>
-            </li>
-          </ul>
-          <div id="descripciones" aria-hidden="true"></div>
-          <div id="terrain"></div>
-          <div id="backImg" aria-hidden="true"></div>
-        </nav>
+        </div>
         <div class="parallax left-top">
           <img class="rotate" src="https://museodememoria.gov.co/sanaciones/multimedia/svg_iconografia/icono-05-N.svg">
         </div>
