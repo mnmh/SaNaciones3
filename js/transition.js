@@ -1,5 +1,5 @@
 
-function pageTransition(){
+/*function pageTransition(){
   var tl = gsap.timeline();
 
   tl.to('.transition', { duration: 1, scale: 4, transformOrigin: 'center', })
@@ -47,4 +47,40 @@ barba.init({
     }
 
   }]
-})
+})*/
+
+barba.hooks.beforeEnter((data) => {
+  window.scrollTo(0, 0);
+});
+/* barba.hooks.after(() => {
+  bodyEnter();
+}); */
+
+barba.init({
+  timeout: 10000,
+  preventRunning: true,
+  //the transitions array
+  transitions: [{
+    name: 'menu-transition',
+    before(data) {
+      /* return gsap.to(data.current.container, {
+        opacity: 0
+      }); */
+    },
+    async leave(data) {
+      const done = this.async();
+      menuClose(caminoSel);
+      await delay(5500);
+      done();
+    },
+    async afterEnter(data) {
+      return data.next.container.querySelector(".terrain").classList.add("is-active");
+      //console.log(data.next.container.querySelector(".terrain"));
+    },
+    /* from: {
+      custom: ({ trigger }) => {
+        return trigger.classList && trigger.classList.contains('prueba');
+      }
+    }, */ 
+  }],
+});
