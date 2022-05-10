@@ -5,8 +5,10 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
 window.addEventListener('resize', () => {
   let vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty('--vh', `${vh}px`);
-  gsap.to(caminos, { x: 0, y: 0, left: i => pos[i].left, top: i => pos[i].top, duration: 0.5, ease: "power2.inOut" });
+    if (pos.length >0){
+  gsap.to(caminos, { x: 0, y: 0, left: i => pos[i].left, top: i => pos[i].top, duration: 0.5, ease: "power2.inOut" });}
 });
+    
 /* function resizeWindow() {
   ulWidth = document.querySelector("#menu ul").clientWidth;
   ulheight = document.querySelector("#menu ul").clientHeight;
