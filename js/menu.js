@@ -1,13 +1,17 @@
 gsap.registerPlugin(ScrollTrigger, Draggable);
+barba.use(barbaCss);
 
 const body = document.querySelector("body");
 let terrain = document.querySelector(".terrain");
-terrain.classList.add("is-active");
+let terrainIn = document.querySelector(".terrainIn");
+//terrain.classList.add("is-active");
+//gsap.delayedCall(2, () => terrain.classList.add("is-active"));
 var caminoSel;
 const bodyEnter = () => {
   //body.classList.remove("off");
   //terrain.classList.remove("is-active");
-  //terrain = document.querySelector(".terrain");
+  terrain = document.querySelector(".terrain");
+  //gsap.to(terrain, { opacity: 0.2, duration: 0.5 });
   /* terrain.style.setProperty('--x', `${Math.round(caminoSel.x)}px`);
   terrain.style.setProperty('--y', `${Math.round(caminoSel.y)}px`); */
   //gsap.delayedCall(1, () => terrain.classList.add("is-active"));
@@ -24,6 +28,10 @@ const preventScroll = e => {
 const disableScroll = () => body.addEventListener('wheel', preventScroll);
 const enableScroll = () => body.removeEventListener('wheel', preventScroll);
 
+const pageTransition = (current, trans) => {
+  gsap.to(current, { opacity: 0, duration: 1, onComplete: () => { console.log(trans); } });
+}
+
 //Function to Delay
 function delay(n){
   n = n || 2000;
@@ -34,39 +42,21 @@ function delay(n){
   })
 }
 
-barba.hooks.beforeEnter((data) => {
-  window.scrollTo(0, 0);
-});
-/* barba.hooks.after(() => {
-  bodyEnter();
-}); */
-
 barba.init({
   timeout: 10000,
   preventRunning: true,
-  //the transitions array
+  sync: true,
   transitions: [{
-    name: 'menu-transition',
-    before(data) {
-      /* return gsap.to(data.current.container, {
-        opacity: 0
-      }); */
-    },
-    async leave(data) {
+    name: 'fromMenu',
+    sync: true,
+    async beforeLeave() {
       const done = this.async();
-      menuClose(caminoSel);
-      await delay(5500);
+      await delay(1000);
       done();
+      console.log("beforeLeave");
     },
-    async afterEnter(data) {
-      return data.next.container.querySelector(".terrain").classList.add("is-active");
-      //console.log(data.next.container.querySelector(".terrain"));
-    },
-    /* from: {
-      custom: ({ trigger }) => {
-        return trigger.classList && trigger.classList.contains('prueba');
-      }
-    }, */ 
+    leave() {},
+    enter() {},
   }],
 });
 
@@ -190,7 +180,7 @@ caminos.forEach(camino => {
     gsap.set(camino, { zIndex: 20 })
     gsap.to(camino, { opacity: 1, duration: 0.5, ease: "power2.inOut" });
     gsap.to(backImg, { opacity: 0.7, duration: 0.5, ease: "power2.inOut" });
-    gsap.to(terrain, { opacity: 0.6, duration: 0.5, ease: "power2.inOut" });
+    gsap.to(terrainIn, { opacity: 1, duration: 0.5, ease: "power2.inOut" });
     gsap.to(backOthers, { opacity: 0, duration: 0.5, ease: "power2.inOut" });
     camino.tl.play();
   }
@@ -198,7 +188,7 @@ caminos.forEach(camino => {
     camino.removeAttribute('data-over');
     gsap.to(caminos, { opacity: 1, duration: 0.5, ease: "power2.out" });
     gsap.to(backImg, { opacity: 0, duration: 0.5, ease: "power2.out" });
-    gsap.to(terrain, { opacity: 0.2, duration: 0.4, ease: "power2.out" });
+    gsap.to(terrainIn, { opacity: 0.8, duration: 0.4, ease: "power2.out" });
     camino.tl.reverse();
   }
   
@@ -283,7 +273,7 @@ function menuClose(who) {
     .to(names, { opacity: 0, duration: scaleTime, ease: "power2.inOut", delay: 0.09 }, "walk")
     .to(caminoBox, { scale: 0.4, duration: scaleTime, transformOrigin: "50% 50%", ease: "power2.inOut", delay: 0.3 }, "walk")
     .to(caminoBox, { rotation: i => `${dir[i].dirSi}${"random(150, 200)"}`, duration: "random(2, 2.8, .1)", transformOrigin: "50% 50%", ease: "power2.inOut" }, "walk")
-    .to(terrain, { opacity: 0.2, duration: 2, ease: "power1.inOut" }, "<")
+    .to(terrainIn, { opacity: 0.8, duration: 2, ease: "power1.inOut" }, "<")
     .to(caminoBox, { opacity: 0, duration: 0.9, ease: "power2.inOut" }, "-=1.5")
     .to(backDivs, { opacity: 0, duration: 0.7, ease: "power1.inOut" }, ">-1")
     //.to("main", { opacity: 1, duration: 0.5 }, "-=0.2")

@@ -191,10 +191,10 @@ input {
 body {
   background-color: white;
   transition: background-color 0.5s linear 0.2s;
-  &.homeBody {
+  &.bodyHome {
     background-color: #4260ac;
   }
-  &.disposicionBody {
+  &.bodyDisposicion {
     background-color: #9053a1;
   }
   &.programacion {
@@ -664,7 +664,7 @@ header.menu-banner {
 }
 
 .terrain {
-  --mask: circle(300px at var(--x, 50vw) var(--y, 50vh));
+  --mask: circle(80% at var(--x, 50vw) var(--y, 50vh));
   position: absolute;
   width: 100%;
   height: 100%;
@@ -672,28 +672,27 @@ header.menu-banner {
   top: 0;
   z-index: 10;
   transition: all 0.75s cubic-bezier(0.5, 0.7, 0.4, 1);
-  background-color: white;
-  clip-path: var(--mask);
+  background-color: transparent;
+  //clip-path: var(--mask);
 
   &.is-active {
     --mask: circle(75% at var(--x, 50vw) var(--y, 50vh));
   }
   .disposicion & {
-    background-color: #9053a1;
+    //background-color: #9053a1;
   }
   .home & {
-    background-color: lightpink;
+    //background-color: lightpink;
   }
   .terrainIn {
     pointer-events: none;
     position: absolute;
-    opacity: 0.2;
-    opacity: 1;
+    opacity: 0.8;
     width: 100%;
     height: 100%;
     left: 0;
     top: 0;
-    background-color: black;
+    //background-color: black;
     mix-blend-mode: overlay;
     -webkit-mask-size: contain;
       mask-size: contain;
@@ -705,28 +704,14 @@ header.menu-banner {
       mask-origin: border-box;
   
     .home & {
+      background-color: #27d617;
       -webkit-mask-image: url("../images/terrain.svg");
       mask-image: url("../images/terrain.svg");
     }
     .disposicion & {
+      background-color: #de18a9;
       -webkit-mask-image: url("../images/terrain-disposicion.svg");
       mask-image: url("../images/terrain-disposicion.svg");
-    }
-    .territorios & {
-      -webkit-mask-image: url("../images/terrain-territorios.svg");
-      mask-image: url("../images/terrain-territorios.svg");
-    }
-    .resistencias & {
-      -webkit-mask-image: url("../images/terrain-resistencias.svg");
-      mask-image: url("../images/terrain-resistencias.svg");
-    }
-    .fuerza & {
-      -webkit-mask-image: url("../images/terrain-fuerza.svg");
-      mask-image: url("../images/terrain-fuerza.svg");
-    }
-    .naciones & {
-      -webkit-mask-image: url("../images/terrain-naciones.svg");
-      mask-image: url("../images/terrain-naciones.svg");
     }
   }
 }
@@ -1757,7 +1742,7 @@ header.menu-banner {
 main{
     display: flex;
     position: relative;
-    z-index: 100;
+    //z-index: 100;
 }
 
 .back {
@@ -1768,4 +1753,27 @@ main{
   height: 100%;
   z-index: 1;
   background-color: #9053a1;
+}
+
+.fromMenu-enter {
+  clip-path: circle(0% at var(--x, 50vw) var(--y, 50vh));
+}
+.fromMenu-enter-active {
+  transition: all 1.8s cubic-bezier(.08,.24,.19,1);
+  position: absolute;
+  top: 0;
+  z-index: 2;
+}
+.fromMenu-enter-to {
+  clip-path: circle(80% at var(--x, 50vw) var(--y, 50vh));
+}
+.fromMenu-leave {
+  opacity: 1;
+}
+.fromMenu-leave-active {
+  z-index: 1;
+  transition: all 1.8s cubic-bezier(.08,.24,.19,1);
+}
+.fromMenu-leave-to {
+  opacity: 0.99;
 }
