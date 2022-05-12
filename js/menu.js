@@ -50,10 +50,12 @@ barba.init({
     name: 'fromMenu',
     sync: true,
     async beforeLeave() {
+      /* body.style.setProperty('--x', `${Math.round(caminoSel.x)}px`);
+      body.style.setProperty('--y', `${Math.round(caminoSel.y)}px`); */
       const done = this.async();
       await delay(1000);
       done();
-      console.log("beforeLeave");
+      //console.log("beforeLeave");
     },
     leave() {},
     enter() {},
@@ -84,6 +86,7 @@ const leadsBox = document.querySelector("#descripciones");
 const caminos = Array.from(document.querySelectorAll("#menuBox ul li"));
 const caminosLink = Array.from(document.querySelectorAll("#menuBox li a"));
 const menuChange = document.querySelector("#menu-change");
+const loading = document.querySelector(".loading");
 let vel = [-1, -2, -3, -4, 1, 2, 3, 4, 5, 6, 7, 8];
 let [backDivs, descripciones, pos, xRandom, yRandom] = [[], [], [], [], []];
 function posRandom() {
@@ -129,6 +132,7 @@ menuChange.appendChild(eyeClose);
 eye.classList.add("eye");
 eyeClose.classList.add("eyeClose");
 //menuChange.appendChild(eye.cloneNode(true));
+loading.appendChild(document.createElement("span"));
 
 //gsap.to(eyes, { opacity: 0.4, duration: 1.2, ease: "power2.out" })
 
@@ -409,6 +413,15 @@ menuChange.addEventListener("click", function (event) {
   }
   caminos.forEach(x => x.classList.add("disable"));
   openMenu(false);
+});
+
+const prueba = document.querySelector(".prueba");
+prueba.addEventListener("click", function (event) {
+  event.preventDefault();
+  //gsap.to(loading, { opacity: 1, duration: 0.5, onComplete: () => loading.classList.add("rotation") });
+  gsap.set(loading, { x: "500px", y: "500px" });
+  //loading.classList.add("rotation");
+  
 });
 
 
