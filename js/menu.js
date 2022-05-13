@@ -4,6 +4,7 @@ barba.use(barbaCss);
 const body = document.querySelector("body");
 let terrain = document.querySelector(".terrain");
 let terrainIn = document.querySelector(".terrainIn");
+const content = document.querySelector("#content");
 //terrain.classList.add("is-active");
 //gsap.delayedCall(2, () => terrain.classList.add("is-active"));
 var caminoSel;
@@ -32,6 +33,10 @@ const pageTransition = (current, trans) => {
   gsap.to(current, { opacity: 0, duration: 1, onComplete: () => { console.log(trans); } });
 }
 
+barba.hooks.beforeEnter((data) => {
+  window.scrollTo(0, 0);
+});
+
 //Function to Delay
 function delay(n){
   n = n || 2000;
@@ -50,15 +55,17 @@ barba.init({
     name: 'fromMenu',
     sync: true,
     async beforeLeave() {
-      /* body.style.setProperty('--x', `${Math.round(caminoSel.x)}px`);
-      body.style.setProperty('--y', `${Math.round(caminoSel.y)}px`); */
       const done = this.async();
-      await delay(1000);
+      //await delay(5500);
+      await menuClose(caminoSel);
       done();
-      //console.log("beforeLeave");
     },
-    leave() {},
-    enter() {},
+    leave() { },
+    beforeEnter: ({ next }) => {
+      const content = next.container.querySelector("#content");
+      console.log(content);
+    },
+    enter() { }
   }],
 });
 
@@ -86,7 +93,7 @@ const leadsBox = document.querySelector("#descripciones");
 const caminos = Array.from(document.querySelectorAll("#menuBox ul li"));
 const caminosLink = Array.from(document.querySelectorAll("#menuBox li a"));
 const menuChange = document.querySelector("#menu-change");
-const loading = document.querySelector(".loading");
+const loading = document.querySelector("#loading");
 let vel = [-1, -2, -3, -4, 1, 2, 3, 4, 5, 6, 7, 8];
 let [backDivs, descripciones, pos, xRandom, yRandom] = [[], [], [], [], []];
 function posRandom() {
@@ -139,6 +146,14 @@ loading.appendChild(document.createElement("span"));
 gsap.set(caminos, { xPercent: -50, yPercent: -50 });
 gsap.set(menuChange, { top: document.querySelector("#headerBar").offsetHeight + 20 });
 //gsap.to("main", { opacity: 1, duration: 1, delay: 1 });
+
+const inicial = (e) => {
+  return new Promise( done => {
+    content = e.querySelector("main #content");
+    console.log(content);
+    done();
+  })
+}
 
 caminos.forEach(camino => {
   camino.classList.add("disable");
@@ -228,7 +243,6 @@ caminos.forEach(camino => {
   camino.addEventListener("click", function (event) {
     event.preventDefault();
     caminoSel = this;
-    console.log(caminoSel);
   });
 })
 
@@ -253,35 +267,61 @@ function parall(e) {
 }
 
 function menuClose(who) {
-  menu.ariaHidden = "true";
-  menuButton.ariaExpanded = "false";
-  document.removeEventListener('mousemove', parall);
-  caminos.forEach(x => x.classList.add("disable"));
-  let scaleTime = gsap.utils.random(1.5, 2, .1);
+  return new Promise( done => {
+    menu.ariaHidden = "true";
+    menuButton.ariaExpanded = "false";
+    document.removeEventListener('mousemove', parall);
+    caminos.forEach(x => x.classList.add("disable"));
+    let scaleTime = gsap.utils.random(1.5, 2, .1);
   
-  gsap.timeline({
-    onComplete: function () {
-      menuButton.classList.remove("disable");
-      document.body.classList.remove("menuOpen");
-      textMenu.classList.remove("hideText");
-      //gsap.set("main", { pointerEvents: "auto" });
-      enableScroll();
-      caminoSel = who.getBoundingClientRect();
-    }
+    gsap.timeline({
+      onComplete: function () {
+        menuButton.classList.remove("disable");
+        document.body.classList.remove("menuOpen");
+        textMenu.classList.remove("hideText");
+        //gsap.set("main", { pointerEvents: "auto" });
+        enableScroll();
+        if(!who){
+          gsap.to(content, { opacity: 1, duration: 0.8 });
+        }
+        done();
+      }
+    })
+      .to(caminoBox, { scale: "+=0.05", rotation: i => `${dir[i].dirNo}25`, opacity: 1, duration: 0.8, ease: "power2.inOut" })
+      .addLabel("walk")
+      .to(menuChange, { autoAlpha: 0, duration: 1, ease: "power2.inOut" })
+      .to(caminos, {
+        x: 0, y: 0, left: i => pos[i].left, top: i => pos[i].top, duration: scaleTime, ease: "power2.inOut", delay: 0.3
+      }, "walk")
+      .to(names, { opacity: 0, duration: scaleTime, ease: "power2.inOut", delay: 0.09 }, "walk")
+      .to(caminoBox, {
+        scale: 0.4, duration: scaleTime, transformOrigin: "50% 50%", ease: "power2.inOut", delay: 0.3, onComplete: () => {
+          if (who) {
+            whoX = `${Math.round(who.getBoundingClientRect().x + (who.getBoundingClientRect().width / 2))}px`;
+            whoY = `${Math.round(who.getBoundingClientRect().y + (who.getBoundingClientRect().height / 2))}px`;
+            body.style.setProperty('--x', whoX);
+            body.style.setProperty('--y', whoY);
+            gsap.set(loading, { x: whoX, y: whoY });
+            loading.className = `trama${caminos.indexOf(who) + 1}`;
+            let direccion = dir[caminos.indexOf(who)].dirSi;
+            if (direccion == "+=") {
+              direccion = "der";
+            } else if (direccion == "-=") {
+              direccion = "izq";
+            }
+            loading.style.setProperty('--rota', direccion);
+            loading.classList.add("rotation");
+            gsap.fromTo(loading, { opacity: 0, scale: 0.8, transformOrigin: "0% 0%" }, { opacity: 1, scale: 1, duration: 0.6, ease: "power2.out" });
+          }
+        }
+      }, "walk")
+      .to(caminoBox, { rotation: i => `${dir[i].dirSi}${"random(150, 200)"}`, duration: "random(2, 2.8, .1)", transformOrigin: "50% 50%", ease: "power2.inOut" }, "walk")
+      .to(terrainIn, { opacity: 0.8, duration: 2, ease: "power1.inOut" }, "<")
+      .to(caminoBox, { opacity: 0, duration: 0.9, ease: "power2.inOut" }, "-=1.5")
+      .to(backDivs, { opacity: 0, duration: 0.7, ease: "power1.inOut" }, ">-1")
+      //.to("main", { opacity: 1, duration: 0.5 }, "-=0.2")
+      ;
   })
-    .to(caminoBox, { scale: "+=0.05", rotation: i => `${dir[i].dirNo}25`, opacity: 1, duration: 0.8, ease: "power2.inOut" })
-    .addLabel("walk")
-    .to(menuChange, { autoAlpha: 0, duration: 1, ease: "power2.inOut" })
-    .to(caminos, {
-      x: 0, y: 0, left: i => pos[i].left, top: i => pos[i].top, duration: scaleTime, ease: "power2.inOut", delay: 0.3 }, "walk")
-    .to(names, { opacity: 0, duration: scaleTime, ease: "power2.inOut", delay: 0.09 }, "walk")
-    .to(caminoBox, { scale: 0.4, duration: scaleTime, transformOrigin: "50% 50%", ease: "power2.inOut", delay: 0.3 }, "walk")
-    .to(caminoBox, { rotation: i => `${dir[i].dirSi}${"random(150, 200)"}`, duration: "random(2, 2.8, .1)", transformOrigin: "50% 50%", ease: "power2.inOut" }, "walk")
-    .to(terrainIn, { opacity: 0.8, duration: 2, ease: "power1.inOut" }, "<")
-    .to(caminoBox, { opacity: 0, duration: 0.9, ease: "power2.inOut" }, "-=1.5")
-    .to(backDivs, { opacity: 0, duration: 0.7, ease: "power1.inOut" }, ">-1")
-    //.to("main", { opacity: 1, duration: 0.5 }, "-=0.2")
-  ;
 }
 
 let scaleTime = gsap.utils.random(2, 2.5, .1);
@@ -312,6 +352,7 @@ let openM = gsap.timeline({
 })
   .addLabel("terra")
   //.to(terrain, { opacity: 1, duration: 1.2, ease: "power2.out" })
+  .to(content, { opacity: 0, duration: 0.8 })
   .to(caminoBox, { opacity: 1, duration: 0.6, ease: "power2.inOut" }, "terra")
   .to(caminoBox, { scale: "-=0.05", rotation: i => `${dir[i].dirNo}25`, duration: 1.2, ease: "power2.inOut" }, "terra")
   .addLabel("walk")
@@ -419,7 +460,7 @@ const prueba = document.querySelector(".prueba");
 prueba.addEventListener("click", function (event) {
   event.preventDefault();
   //gsap.to(loading, { opacity: 1, duration: 0.5, onComplete: () => loading.classList.add("rotation") });
-  gsap.set(loading, { x: "500px", y: "500px" });
+  
   //loading.classList.add("rotation");
   
 });
