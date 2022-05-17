@@ -406,17 +406,15 @@ barba.init({
       async beforeLeave() {
         const done = this.async();
         await menuClose(caminoSel);
-        await delay(800);
+        await delay(1000);
+        gsap.to(loading, { opacity: 0, scale: 2, duration: 0.3, delay: 0.1, ease: 'power2.in', onComplete: () => loading.classList.remove("rotation") });
         done();
       },
       leave() { },
-      beforeEnter() {
-        gsap.to(loading, { opacity: 0, scale: 2, duration: 0.3, delay: 0.1, ease: 'power2.in', onComplete: () => loading.classList.remove("rotation") });
-      },
       enter() { },
       afterEnter: ({ next }) => {
-        gsap.fromTo(next.container.querySelector("#content"), { opacity: 0 }, { opacity: 1, duration: 1, delay: 0.5, ease: 'power2.out' });
-        body.className = next.namespace;
+        gsap.fromTo(next.container.querySelector("#content"), { opacity: 0 }, { opacity: 1, duration: 1, ease: "power3.out "});
+        body.className = `${next.namespace}Body`;
         mainDiv = next.container;
         
       }
