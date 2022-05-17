@@ -192,11 +192,23 @@ body {
   --mask: circle(0% at var(--x, 50vw) var(--y, 50vh));
   background-color: white;
   transition: background-color 0.5s linear 0.2s;
-  &.bodyHome {
-    background-color: #4260ac;
+  &.home {
+    background-color: #996de9;
   }
-  &.bodyDisposicion {
-    background-color: #9053a1;
+  &.dialogo {
+    background-color: lightpink;
+  }
+  &.territorios {
+    background-color: #27b554;
+  }
+  &.resistencias {
+    background-color: #c49224;
+  }
+  &.fuerza {
+    background-color: #bdc672;
+  }
+  &.naciones {
+    background-color: #3888d9;
   }
   &.programacion {
     background-color: $programacion;
@@ -217,6 +229,9 @@ body {
   }
   &.off {
     background-color: transparent;
+  }
+  &.menuOpen{
+    overflow-y: hidden;
   }
 }
 main {
@@ -304,7 +319,6 @@ header.menu-banner {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-    border-bottom: 1px dashed $color-green1;
 
     a#logo {
       display: block;
@@ -365,7 +379,7 @@ header.menu-banner {
       pointer-events: none;
 
       @for $i from 1 through 5 {
-        &.tram#{$i} {
+        &.trama#{$i} {
           -webkit-mask-image: url("../images/menu-trama-" + $i + ".svg");
           mask-image: url("../images/menu-trama-" + $i + ".svg");
         }
@@ -388,8 +402,11 @@ header.menu-banner {
       .feather {
         opacity: 1;
       }
+      #text-menu {
+        display: none;
+      }
     }
-    #text-menu{
+    #text-menu {
       color: #fff;
     }
   }
@@ -428,7 +445,7 @@ header.menu-banner {
     width: 56px;
     height: 56px;
     pointer-events: none;
-    z-index: 600;
+    z-index: 800;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -494,6 +511,7 @@ header.menu-banner {
       justify-content: center;
       z-index: 600;
       opacity: 1;
+      border-radius: 50%;
 
       a {
         width: 100%;
@@ -578,7 +596,7 @@ header.menu-banner {
         &:nth-child(#{$i}) {
           a {
             .trama {
-              background-color: $color-green1;
+              background-color: white;
               //background-color: nth($colors-caminos, $i);
               -webkit-mask-image: url("../images/menu-trama-" + $i + ".svg");
               mask-image: url("../images/menu-trama-" + $i + ".svg");
@@ -675,11 +693,23 @@ header.menu-banner {
   z-index: 10;
   background-color: transparent;
 
-  .disposicion & {
-    background-color: #9053a1;
-  }
   .home & {
+    background-color: #996de9;
+  }
+  .dialogo & {
     background-color: lightpink;
+  }
+  .territorios & {
+    background-color: #27b554;
+  }
+  .resistencias & {
+    background-color: #50bcd2
+  }
+  .fuerza & {
+    background-color: #bdc672;
+  }
+  .naciones & {
+    background-color: #3888d9;
   }
   .terrainIn {
     pointer-events: none;
@@ -704,9 +734,25 @@ header.menu-banner {
       -webkit-mask-image: url("../images/terrain.svg");
       mask-image: url("../images/terrain.svg");
     }
-    .disposicion & {
-      -webkit-mask-image: url("../images/terrain-disposicion.svg");
-      mask-image: url("../images/terrain-disposicion.svg");
+    .dialogo & {
+      -webkit-mask-image: url("../images/terrain-dialogo.svg");
+      mask-image: url("../images/terrain-dialogo.svg");
+    }
+    .territorios & {
+      -webkit-mask-image: url("../images/terrain-territorios.svg");
+      mask-image: url("../images/terrain-territorios.svg");
+    }
+    .resistencias & {
+      -webkit-mask-image: url("../images/terrain-resistencias.svg");
+      mask-image: url("../images/terrain-resistencias.svg");
+    }
+    .fuerza & {
+      -webkit-mask-image: url("../images/terrain-fuerza.svg");
+      mask-image: url("../images/terrain-fuerza.svg");
+    }
+    .naciones & {
+      -webkit-mask-image: url("../images/terrain-naciones.svg");
+      mask-image: url("../images/terrain-naciones.svg");
     }
   }
 }
@@ -1705,6 +1751,7 @@ header.menu-banner {
   display: flex;
   flex-flow: column nowrap;
   z-index: 100;
+  opacity: 0;
 
   h1 {
     font-size: 10vw;
@@ -1753,6 +1800,7 @@ header.menu-banner {
   width: 14vw;
   height: 14vw;
   opacity: 0;
+  transition: opacity 0.5s ease-out;
 
   span {
     transform-origin: 50% 50%;
@@ -1761,9 +1809,10 @@ header.menu-banner {
     height: 100%;
     top: -50%;
     left: -50%;
-    background-color: yellow;
+    background-color: white;
   }
   &.rotation {
+    opacity: 1;
     span {
       animation: var(--rota) 20s infinite linear;
     }
@@ -1778,26 +1827,35 @@ header.menu-banner {
   }
 }
 
-.fromMenu-enter {
+/* .transMenu-once {
+  opacity: 0;
+}
+.transMenu-once-active {
+  transition: all 1s linear 0.3s;
+}
+.transMenu-once-to {
+  opacity: 1;
+} */
+.transMenu-enter {
   clip-path: var(--mask);
   //clip-path: circle(0% at var(--x, 50vw) var(--y, 50vh));
 }
-.fromMenu-enter-active {
+.transMenu-enter-active {
   transition: all 1.2s cubic-bezier(.08,.24,.19,1);
   position: absolute;
   top: 0;
   z-index: 2;
 }
-.fromMenu-enter-to {
+.transMenu-enter-to {
   clip-path: circle(120% at 50vw 50vh);
 }
-.fromMenu-leave {
+.transMenu-leave {
   opacity: 1;
 }
-.fromMenu-leave-active {
+.transMenu-leave-active {
   z-index: 1;
   transition: all 1.2s cubic-bezier(.08,.24,.19,1);
 }
-.fromMenu-leave-to {
+.transMenu-leave-to {
   opacity: 0.99;
 }
