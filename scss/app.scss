@@ -1863,3 +1863,28 @@ header.menu-banner {
 .transMenu-leave-to {
   opacity: 0.99;
 }
+
+/****PARALLAX***/
+
+$heroHeight: 800px;
+
+#contentParallax {
+	overflow: hidden;
+	position: relative;
+	max-width: 1920px;
+	margin: 0 auto;
+}
+
+.layer {
+	background-position: bottom center;
+	background-size: auto;
+	background-repeat: no-repeat;
+	width: auto;
+	position: fixed;
+	z-index: -1;
+}
+
+.backTerrain {
+  -webkit-mask-image: url("../images/terrain.svg");
+  mask-image: url("../images/terrain.svg");
+}
