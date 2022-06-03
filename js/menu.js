@@ -422,6 +422,9 @@ barba.init({
   ],
 });
 
+// carga https://feathericons.com
+feather.replace();
+
 
 /* const prueba = document.querySelector(".prueba");
 prueba.addEventListener("click", function (event) {
